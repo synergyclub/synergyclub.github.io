@@ -8,6 +8,15 @@ body {
     overflow-x: hidden;
 }
 
+
+a:visited,
+a:hover,
+a:focus,
+a:hover,
+a:active,
+a {
+     text-decoration: none; }
+
 #particles-js {
     position: fixed !important;
     top: 0 !important;

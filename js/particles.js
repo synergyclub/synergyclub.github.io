@@ -1,4 +1,4 @@
-        // Add error handling and browser compatibility check
+// Add error handling and browser compatibility check
         window.addEventListener('load', async function() {
             console.log("Window loaded, initializing particles...");
             if (typeof tsParticles === 'undefined') {
@@ -45,7 +45,15 @@
                     },
                     move: {
                         enable: true,
-                        speed: 2
+                        speed: 2,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "destroy"
+                    },
+                    collisions: {
+                        enable: true,
+                        mode: "destroy"
                     }
                 },
                 interactivity: {
