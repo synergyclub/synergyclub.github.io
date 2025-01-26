@@ -31,14 +31,14 @@ window.addEventListener('load', function() {
                 },
                 move: {
                     enable: true,
-                    speed: 2
+                    speed: 0.75
                 }
             },
             interactivity: {
                 events: {
                     onHover: {
                         enable: true,
-                        mode: ["connect", "grab"] // Choose one mode here
+                        mode: ["connect", "grab"]
                     },
                     onClick: {
                         enable: true,
