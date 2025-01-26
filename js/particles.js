@@ -78,7 +78,7 @@ window.addEventListener('load', function() {
                         links: {
                             opacity: 0.5
                         },
-                        radius: 100
+                        radius: 200
                     },
                     trail: {
                         delay: 0.1,
