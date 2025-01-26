@@ -8,44 +8,38 @@ body {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     padding: 0;
     min-height: 100vh;
-    background-color: #0a192f;
     position: relative;
     overflow-x: hidden;
+    background-color: #0a192f;
 }
 
 
 
 
 #particles-js {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100vh !important;
-    z-index: 1;
-    pointer-events: all;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-#particles-js canvas {
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 0 !important;
-    pointer-events: initial !important;
-    opacity: 1 !important;
-}
-
-canvas {
-    display: block;
-    vertical-align: bottom;
+/* The canvas automatically created by particles.js */
+canvas.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .content {
     position: relative;
-    z-index: 5;
+    z-index: 3;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -55,12 +49,15 @@ canvas {
 
 nav {
     position: fixed;
-    z-index: 10;
     top: 0;
     width: 100%;
     background-color: rgba(10, 25, 47, 0.9);
-    z-index: 3;
-    padding: 1rem 0;
+    z-index: 10;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -68,21 +65,35 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 2rem;
+    flex: 1;
     justify-content: center;
 }
 
-nav ul li {
-    margin: 0 1rem;
+nav li {
+    margin: 0;
 }
 
-nav ul li a {
+.nav-link {
+    background: none;
+    border: none;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-link:hover {
     color: #64ffda;
+}
+
+.nav-logo {
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 2rem;
+    vertical-align: middle;
 }
 
 h1 {

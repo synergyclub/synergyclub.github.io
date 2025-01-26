@@ -1,83 +1,113 @@
-// Add error handling and browser compatibility check
-        window.addEventListener('load', async function() {
-            console.log("Window loaded, initializing particles...");
-            if (typeof tsParticles === 'undefined') {
-                console.error('tsParticles library failed to load');
-                return;
-            }
-            
-            try {
-                console.log("Starting tsParticles initialization...");
-                await tsParticles.init();
-                console.log("tsParticles initialized successfully");
-                await tsParticles.load("particles-js", {
-                    fullScreen: {
-                        enable: false
-                    },
-                particles: {
-                    number: {
-                        value: 50,
-                        density: {
-                            enable: true,
-                            value_area: 800
-                        }
-                    },
-                    color: {
-                        value: "#64ffda"
-                    },
-                    shape: {
-                        type: "circle"
-                    },
-                    opacity: {
-                        value: 0.5,
-                        random: false
-                    },
-                    size: {
-                        value: 3,
-                        random: true
-                    },
-                    line_linked: {
+window.addEventListener('load', function() {
+    try {
+        tsParticles.load("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
                         enable: true,
-                        distance: 150,
-                        color: "#ffffff",
-                        opacity: 0.4,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: "none",
-                        random: false,
-                        straight: false,
-                        out_mode: "destroy"
-                    },
-                    collisions: {
-                        enable: true,
-                        mode: "destroy"
+                        value_area: 800
                     }
                 },
-                interactivity: {
-                    events: {
-                        onhover: {
-                            enable: true,
-                            mode: "attract"
-                        }
+                color: {
+                    value: "#64ffda"
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.8
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                links: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2
+                }
+            },
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: ["connect", "grab"] // Choose one mode here
+                    },
+                    onClick: {
+                        enable: true,
+                        mode: "push"
                     }
                 },
-                background: {
-                    color: "#0a192f"
+                modes: {
+                    grab: {
+                        distance: 140,
+                        links: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 200,
+                        size: 12,
+                        duration: 2,
+                        opacity: 0.8
+                    },
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        quantity: 4
+                    },
+                    attract: {
+                        distance: 200,
+                        duration: 0.4,
+                        factor: 5
+                    },
+                    bounce: {
+                        distance: 200
+                    },
+                    connect: {
+                        distance: 100,
+                        links: {
+                            opacity: 0.5
+                        },
+                        radius: 100
+                    },
+                    trail: {
+                        delay: 0.1,
+                        quantity: 3,
+                        pauseOnStop: true,
+                        particles: {
+                            color: {
+                                value: "#ff0000"
+                            },
+                            size: {
+                                value: 5
+                            },
+                            opacity: {
+                                value: 0.5
+                            }
+                        }
+                    },
+                    slow: {
+                        factor: 3,
+                        radius: 200
+                    },
+                    pause: {
+                        radius: 200
+                    }
                 }
-            });
-                console.log("Particles loaded successfully");
-                
-                // Verify canvas creation
-                const canvas = document.querySelector("#particles-js canvas");
-                if (canvas) {
-                    console.log("Canvas element found:", canvas);
-                } else {
-                    console.error("Canvas element not found in DOM");
-                }
-            } catch (error) {
-                console.error('Error during particles initialization:', error);
-            }
+            },
+            detectRetina: true
         });
+    } catch (error) {
+        console.error('Error during particles initialization:', error);
+    }
+});
