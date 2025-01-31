@@ -38,7 +38,7 @@ window.addEventListener('load', function() {
                 events: {
                     onHover: {
                         enable: true,
-                        mode: ["connect", "grab"]
+                        mode: ["connect", "grab", "bubble"]
                     },
                     onClick: {
                         enable: true,
@@ -53,22 +53,22 @@ window.addEventListener('load', function() {
                         }
                     },
                     bubble: {
-                        distance: 200,
-                        size: 12,
+                        distance: 250,
+                        size: 25,
                         duration: 2,
                         opacity: 0.8
                     },
                     repulse: {
-                        distance: 100,
+                        distance: 12,
                         duration: 0.4
                     },
                     push: {
                         quantity: 4
                     },
                     attract: {
-                        distance: 200,
-                        duration: 0.4,
-                        factor: 5
+                        distance: 100,
+                        duration: 0.2,
+                        factor: 3
                     },
                     bounce: {
                         distance: 200
