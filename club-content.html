@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Content</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="content-container">
+        <button onclick="signOut()" class="logout-btn">Sign Out</button>
+        <h1>Welcome to the Club Area</h1>
+        <div id="content">
+            <!-- Add your protected content here -->
+            <p>This is your secure club content. Only authenticated users can see this.</p>
+        </div>
+    </div>
+
+    <script>
+        // Check authentication on page load
+        window.onload = function() {
+            if (sessionStorage.getItem('authenticated') !== 'true') {
+                window.location.href = 'club.html';
+            }
+        }
+
+        // Sign out function
+        function signOut() {
+            // Sign out from Google
+            var auth2 = gapi.auth2.getAuthInstance();
+            if (auth2) {
+                auth2.signOut().then(function () {
+                    console.log('User signed out of Google.');
+                });
+            }
+            
+            // Clear session storage
+            sessionStorage.removeItem('authenticated');
+            window.location.href = 'club.html';
+        }
+    </script>
+</body>
+</html>

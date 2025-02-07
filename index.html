@@ -6,8 +6,11 @@
     <title>Synergy - Home</title>
     <link rel="icon" type="image/x-icon" href="assets/images/synergy-favicon-color.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/auth.js"></script>
 </head>
 <body class="forced-white-links">
     <nav style="position: relative; z-index: 10;">
@@ -22,6 +25,11 @@
     </nav>
 
     <div id="particles-js"></div>
+    <div id="auth-container">
+        <button id="signin-button" onclick="signIn()">Sign in with Google</button>
+        <button id="signout-button" onclick="signOut()" style="display: none;">Sign Out</button>
+        <div id="user-info"></div>
+    </div>
     <div class="content main-content" style="position: relative; z-index: 5;">
         <h1>Welcome to Synergy</h1>
         <p>Revolutionizing the way you power your computers</p>
@@ -41,5 +49,10 @@
             </div>
         </div>
     </div>
+<script>
+        window.onload = function() {
+            initAuth();
+        };
+    </script>
 </body>
 </html>
