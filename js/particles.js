@@ -54,7 +54,7 @@ window.addEventListener('load', function() {
                     },
                     bubble: {
                         distance: 250,
-                        size: 25,
+                        size: 12.5,
                         duration: 2,
                         opacity: 0.8
                     },
