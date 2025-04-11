@@ -15,4 +15,4 @@ To empower students to design, build, and implement energy-efficient and cost-ef
 If you're contributing to Synergy's project, follow these steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/synergy-battery-project.git
+   git clone https://github.com/synergyclub/synergy.github.io.git
