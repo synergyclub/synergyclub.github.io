@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
         tsParticles.load("particles-js", {
             particles: {
                 number: {
-                    value: 80,
+                    value: 80, // Initial number of particles
                     density: {
                         enable: true,
                         value_area: 800
@@ -31,7 +31,7 @@ window.addEventListener('load', function() {
                 },
                 move: {
                     enable: true,
-                    speed: 0.75
+                    speed: 0.5 // Reduce speed for better performance
                 }
             },
             interactivity: {
@@ -63,7 +63,7 @@ window.addEventListener('load', function() {
                         duration: 0.4
                     },
                     push: {
-                        quantity: 4
+                        quantity: 1 // Reduce particles generated on click
                     },
                     attract: {
                         distance: 100,
@@ -107,6 +107,23 @@ window.addEventListener('load', function() {
             },
             detectRetina: true
         });
+
+        // Add a cap to the number of particles
+        const MAX_PARTICLES = 200; // Define the maximum number of particles
+
+        setInterval(() => {
+            const particlesInstance = tsParticles.domItem(0); // Get the first tsParticles instance
+            if (particlesInstance) {
+                const particlesArray = particlesInstance.particles.array;
+                if (particlesArray.length > MAX_PARTICLES) {
+                    const excess = particlesArray.length - MAX_PARTICLES;
+                    for (let i = 0; i < excess; i++) {
+                        particlesInstance.particles.remove(particlesArray[i]); // Remove the oldest particle
+                    }
+                }
+            }
+        }, 1000); // Check every second to reduce overhead
+
     } catch (error) {
         console.error('Error during particles initialization:', error);
     }
