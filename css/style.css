@@ -152,3 +152,61 @@ h1 {
     border-radius: 4px;
     cursor: pointer;
 }
+
+body.dark-mode {
+    background-color: #0004d3; /* Ensure this applies to the entire page */
+    color: #ffffff;
+}
+
+body.dark-mode nav {
+    background-color: rgba(0, 76, 229, 0.9);
+}
+
+body.dark-mode .content {
+    background-color: transparent; /* Ensure content background is transparent */
+    color: #ffffff;
+}
+
+body.dark-mode .feature-card,
+body.dark-mode .feature-card-main {
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust for dark mode */
+    color: #ffffff;
+}
+
+.theme-switcher {
+    margin-right: 10px; /* Adjust this value to move the button left */
+    position: relative;
+    left: -10px; /* Moves the button slightly left */
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+}
+
+.cookie-banner p {
+    margin: 0;
+    display: inline-block;
+}
+
+.cookie-button {
+    background-color: #64ffda;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cookie-button:hover {
+    background-color: #52e0c4;
+}

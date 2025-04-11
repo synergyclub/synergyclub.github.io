@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/auth.css">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/theme-switcher.js" defer></script>
+    <script src="js/cookie-banner.js" defer></script>
 </head>
 <body class="forced-white-links">
     <nav style="position: relative; z-index: 10;">
@@ -20,6 +22,7 @@
             <li><button onclick="window.location.href='info.html'" role="link" aria-label="Info" class="nav-link">Info</button></li>
             <li><button onclick="window.location.href='about.html'" role="link" aria-label="About Us" class="nav-link">About Us</button></li>
         </ul>
+        <button id="theme-switcher" class="nav-link theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
     </nav>
 
     <div id="particles-js"></div>
@@ -41,6 +44,10 @@
                 <p>At Strath Haven Middle School, students face battery issues with their Chromebooks. The Synergy club is designing portable laptop chargers called Rick Rolls (RR) to address this. The team aims to create smaller, lighter, 3D-printable chargers with greater capacity, enabling efficient charging for multiple devices in every classroom.</p>
             </div>
         </div>
+    </div>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+        <button id="accept-cookies" class="cookie-button">Accept</button>
     </div>
 </body>
 </html>
