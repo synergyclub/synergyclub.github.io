@@ -14,21 +14,24 @@
   <!-- Inline styles for the animated rainbow text -->
   <style>
     .main-content h1 {
+      margin-top: 20px; /* Adjusted to raise the title */
       background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      background-size: 200% auto;
+      background-size: 300% auto; /* Increased for smoother transitions */
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
-      /* Animation properties */
-      animation: rainbow 5s linear infinite;
+      animation: rainbow 8s ease-in-out infinite; /* Smooth transition with ease-in-out */
     }
 
     @keyframes rainbow {
-      from {
+      0% {
         background-position: 0% center;
       }
-      to {
-        background-position: 200% center;
+      50% {
+        background-position: 100% center;
+      }
+      100% {
+        background-position: 0% center;
       }
     }
   </style>
@@ -71,13 +74,21 @@
     <h1>Welcome to Synergy</h1>
     <p>Revolutionizing the way you power your computers</p>
     <div style="text-align: center; margin-top: 20px;">
-      <!-- Buy me a Coffee-->
+      <!-- Buy me a Coffee -->
       <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">
         <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me a Coffee" />
       </a>
       <!-- GitHub Badge -->
       <a href="https://github.com/synergyclub" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-follow-blue?style=for-the-badge&logo=github" alt="GitHub" />
+      </a>
+      <!-- Venmo Badge -->
+      <a href="https://venmo.com/" target="_blank">
+        <img src="https://img.shields.io/badge/Venmo-donate-blue?style=for-the-badge&logo=venmo" alt="Venmo" />
+      </a>
+      <!-- CashApp Badge -->
+      <a href="https://cash.app/" target="_blank">
+        <img src="https://img.shields.io/badge/CashApp-donate-green?style=for-the-badge&logo=cashapp" alt="CashApp" />
       </a>
     </div>
     <div class="features">
