@@ -11,12 +11,15 @@
     <script src="js/theme-switcher.js" defer></script>
     <script src="js/cookie-banner.js" defer></script>
     <style>
+        /* Timeline container styling */
         .timeline {
             position: relative;
             margin: 50px auto;
             padding: 20px 0;
             width: 80%;
         }
+
+        /* Vertical line in the center of the timeline */
         .timeline::before {
             content: '';
             position: absolute;
@@ -24,53 +27,77 @@
             left: 50%;
             width: 4px;
             height: 100%;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.15); /* Semi-transparent line */
         }
+
+        /* Individual timeline item styling */
         .timeline-item {
             position: relative;
             margin: 20px 0;
             width: 50%;
         }
+
+        /* Odd timeline items aligned to the left */
         .timeline-item:nth-child(odd) {
             left: 0;
         }
+
+        /* Even timeline items aligned to the right */
         .timeline-item:nth-child(even) {
             left: 50%;
         }
+
+        /* Content box for each timeline item */
         .timeline-item-content {
             position: relative;
             padding: 15px 20px;
-            background: #222;
+            background: rgba(255, 255, 255, 0.15); /* Feature card background color */
             border-radius: 8px;
             text-align: left;
+            color: white; /* Text color */
+            transition: transform 0.3s ease;
         }
+
+        /* Align text to the right for even timeline items */
         .timeline-item:nth-child(even) .timeline-item-content {
             text-align: right;
         }
+
+        /* Dots on the timeline */
         .timeline-item::before {
             content: '';
             position: absolute;
-            top: 20px;
-            left: -8px;
+            top: 0; /* Align dots to the timeline line */
+            left: 50%; /* Centers dots on the line */
+            transform: translateX(-50%);
             width: 16px;
             height: 16px;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.15); /* Semi-transparent dot */
             border-radius: 50%;
-            border: 4px solid #121212;
+            border: 4px solid #121212; /* Dark border for contrast */
             z-index: 1;
         }
+
+        /* Adjust dot alignment for even timeline items */
         .timeline-item:nth-child(even)::before {
-            left: auto;
-            right: -8px;
+            left: 50%; /* Centers dots on the line */
         }
+
+        /* Date styling for timeline items */
         .timeline-item .date {
             margin-top: 5px;
             font-size: 0.85em;
-            color: gray;
+            color: gray; /* Subtle date color */
+        }
+
+        /* Hover effect for timeline items */
+        .timeline-item-content:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
         }
     </style>
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav style="position: relative; z-index: 10;">
         <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo">
         <ul>
@@ -83,28 +110,35 @@
         <button id="theme-switcher" class="nav-link theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
     </nav>
 
+    <!-- Background particles effect -->
     <div id="particles-js"></div>
+
+    <!-- Main content -->
     <div class="content main-content" style="position: relative; z-index: 2;">
         <h1>Timeline</h1>
         <div class="timeline">
+            <!-- Timeline item 1 -->
             <div class="timeline-item">
                 <div class="timeline-item-content">
                     <p>Event 1 description goes here.</p>
                     <span class="date">January 1, 2023</span>
                 </div>
             </div>
+            <!-- Timeline item 2 -->
             <div class="timeline-item">
                 <div class="timeline-item-content">
                     <p>Event 2 description goes here.</p>
                     <span class="date">February 15, 2023</span>
                 </div>
             </div>
+            <!-- Timeline item 3 -->
             <div class="timeline-item">
                 <div class="timeline-item-content">
                     <p>Event 3 description goes here.</p>
                     <span class="date">March 10, 2023</span>
                 </div>
             </div>
+            <!-- Timeline item 4 -->
             <div class="timeline-item">
                 <div class="timeline-item-content">
                     <p>Event 4 description goes here.</p>
@@ -113,6 +147,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Cookie banner -->
     <div id="cookie-banner" class="cookie-banner">
         <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
         <button id="accept-cookies" class="cookie-button">Accept</button>

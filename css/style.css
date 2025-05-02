@@ -10,11 +10,8 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
-    background-color: #0a192f;
+    background-color: #0a192f; /* Dark background for the page */
 }
-
-
-
 
 #particles-js {
     position: fixed;
@@ -23,10 +20,9 @@ body {
     background-color: transparent;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -1; /* Ensures particles are behind other elements */
 }
 
-/* The canvas automatically created by particles.js */
 canvas.particles-js-canvas-el {
     position: absolute;
     top: 0;
@@ -34,7 +30,7 @@ canvas.particles-js-canvas-el {
     width: 100%;
     height: 100%;
     z-index: 0;
-    pointer-events: none;
+    pointer-events: none; /* Prevents interaction with the canvas */
 }
 
 .content {
@@ -51,13 +47,13 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(10, 25, 47, 0.9);
+    background-color: rgba(10, 25, 47, 0.9); /* Semi-transparent background */
     z-index: 10;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s ease;
 }
 
@@ -85,13 +81,12 @@ nav li {
     font-size: 1.1rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #64ffda;
-    transform: translateY(-5px);
+    color: #64ffda; /* Highlight color on hover */
+    transform: translateY(-5px); /* Slight lift effect */
 }
 
 .nav-logo {
@@ -104,7 +99,7 @@ nav li {
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #64ffda;
+    color: #64ffda; /* Highlight color */
 }
 
 .main-content {
@@ -179,6 +174,79 @@ body.dark-mode .feature-card-main {
     left: -10px; /* Moves the button slightly left */
 }
 
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 20px 0;
+    width: 80%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent line */
+}
+
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item-content {
+    position: relative;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.15); /* Feature card background color */
+    border-radius: 8px;
+    text-align: left;
+    color: white; /* Text color */
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-item-content {
+    text-align: right;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Aligns dots to the timeline line */
+    left: 50%; /* Centers dots on the line */
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent dot */
+    border-radius: 50%;
+    border: 4px solid #121212; /* Dark border for contrast */
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: 50%; /* Centers dots on the line */
+}
+
+.timeline-item .date {
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: gray; /* Subtle date color */
+}
+
+.timeline-item-content:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -198,7 +266,7 @@ body.dark-mode .feature-card-main {
 }
 
 .cookie-button {
-    background-color: #64ffda;
+    background-color: #64ffda; /* Highlight color */
     color: #000;
     border: none;
     padding: 5px 10px;
@@ -208,5 +276,5 @@ body.dark-mode .feature-card-main {
 }
 
 .cookie-button:hover {
-    background-color: #52e0c4;
+    background-color: #52e0c4; /* Slightly darker highlight on hover */
 }
