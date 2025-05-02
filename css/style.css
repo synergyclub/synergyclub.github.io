@@ -223,7 +223,7 @@ body.dark-mode .feature-card-main {
     content: '';
     position: absolute;
     top: 100; /* Aligns dots to the timeline line */
-    transform: translateX(-50%);
+    transform: translateX(-100);
     width: 16px;
     height: 16px;
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent dot */
