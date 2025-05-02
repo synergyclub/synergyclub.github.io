@@ -180,7 +180,7 @@ body.dark-mode .feature-card-main {
     padding: 20px 0;
     width: 80%;
 }
-
+/*
 .timeline::before {
     content: '';
     position: absolute;
@@ -188,11 +188,11 @@ body.dark-mode .feature-card-main {
     left: 50%;
     width: 4px;
     height: 100%;
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent line */
-    transform: translateX(-50%); /* Centers the line horizontally */
-    z-index: 1; /* Ensures the line is below the dots */
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent line 
+    transform: translateX(-50%); /* Centers the line horizontally 
+    z-index: 1; /* Ensures the line is below the dots 
 }
-
+*/
 .timeline-item {
     position: relative;
     margin: 20px 0;
