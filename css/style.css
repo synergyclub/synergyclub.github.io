@@ -227,6 +227,8 @@ body.dark-mode .feature-card-main {
 .timeline-item .circle {
     position: absolute;
     top: calc(50% - 7.5px);
+    center: 50%;
+    transform: translateX(-50%);
     width: 15px;
     height: 15px;
     background-color: #64ffda;
