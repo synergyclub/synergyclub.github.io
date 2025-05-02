@@ -10,7 +10,7 @@
     top: 0;
     height: 100%;
     width: 4px;
-    background-color: #ccc;
+    background-color: #64ffda; /* Updated to match the theme */
     transform: translateX(-50%);
 }
 
@@ -18,7 +18,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #007bff;
+    background-color: #64ffda; /* Updated to match the theme */
     border-radius: 50%;
     border: 2px solid white;
     top: 0;
@@ -30,6 +30,7 @@
     width: 200px;
     margin: 10px auto;
     text-align: center;
+    color: white; /* Updated text color */
 }
 
 .timeline-entry {
