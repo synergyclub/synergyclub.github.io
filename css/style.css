@@ -188,9 +188,23 @@ body.dark-mode .feature-card-main {
     bottom: 0;
     left: 50%;
     width: 4px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent line */
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 1; /* Ensures the line is below the dots */
+}
+
+/* Add blue dots to the timeline line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Aligns the dot vertically in the middle of the timeline line */
+    left: 50%; /* Centers the dot on the timeline line */
+    transform: translate(-50%, -50%); /* Centers the dot both horizontally and vertically */
+    width: 16px;
+    height: 16px;
+    background-color: #007bff; /* Blue color for the dots */
+    border-radius: 50%; /* Makes the dots circular */
+    z-index: 2; /* Ensures the dots are above the timeline line */
 }
 
 .timeline-item {
