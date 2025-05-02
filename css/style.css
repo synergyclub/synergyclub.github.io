@@ -226,6 +226,11 @@ body.dark-mode .feature-card-main {
     left: 50%; /* Centers dots on the timeline line */
 }
 
+/* Remove the dots by overriding the ::before pseudo-element */
+.timeline-item::before {
+    content: none; /* Ensures no dots are rendered */
+}
+
 .timeline-item .date {
     margin-top: 5px;
     font-size: 0.85em;
