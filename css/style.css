@@ -222,7 +222,7 @@ body.dark-mode .feature-card-main {
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 50%; /* Aligns dots to the timeline line */
+    top: 100; /* Aligns dots to the timeline line */
     transform: translateX(-50%);
     width: 16px;
     height: 16px;
