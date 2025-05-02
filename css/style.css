@@ -280,4 +280,5 @@ body.dark-mode .feature-card-main {
 
 .cookie-button:hover {
     background-color: #1f31d4; /* Slightly darker highlight on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
 }
