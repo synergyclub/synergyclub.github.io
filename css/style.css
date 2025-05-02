@@ -200,11 +200,11 @@ body.dark-mode .feature-card-main {
 }
 
 .timeline-item:nth-child(odd) {
-    left: 4;
+    left: 0;
 }
 
 .timeline-item:nth-child(even) {
-    left: 50%+4;
+    left: 50%;
 }
 
 .timeline-item-content {
@@ -219,16 +219,6 @@ body.dark-mode .feature-card-main {
 
 .timeline-item:nth-child(even) .timeline-item-content {
     text-align: right;
-}
-
-/* Ensures even timeline items have the same alignment */
-.timeline-item:nth-child(even)::before {
-    left: 50%; /* Centers dots on the timeline line */
-}
-
-/* Remove the dots by overriding the ::before pseudo-element */
-.timeline-item::before {
-    content: none; /* Ensures no dots are rendered */
 }
 
 .timeline-item .date {
