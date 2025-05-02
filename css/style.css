@@ -226,7 +226,7 @@ body.dark-mode .feature-card-main {
 
 .timeline-item .circle {
     position: absolute;
-    top: 20px;
+    top: calc(50% - 7.5px);
     width: 15px;
     height: 15px;
     background-color: #64ffda;
@@ -235,11 +235,11 @@ body.dark-mode .feature-card-main {
 }
 
 .timeline-item.left .circle {
-    right: -8px;
+    right: -2px;
 }
 
 .timeline-item.right .circle {
-    left: -8px;
+    left: -2px;
 }
 
 .timeline-item .date {
@@ -265,7 +265,7 @@ body.dark-mode .feature-card-main {
     }
 
     .timeline-item .circle {
-        left: -23px;
+        left: 0;
     }
 }
 
