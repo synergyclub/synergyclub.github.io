@@ -177,7 +177,7 @@ body.dark-mode .feature-card-main {
 .timeline {
     position: relative;
     margin: 50px auto;
-    padding: 20px 0;
+    padding: 40px 0;
     width: 80%;
 }
 
@@ -185,50 +185,88 @@ body.dark-mode .feature-card-main {
     content: '';
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 50%;
     width: 4px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent line */
-    transform: translateX(-50%); /* Centers the line horizontally */
-    z-index: 1; /* Ensures the line is below the dots */
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .timeline-item {
     position: relative;
-    margin: 20px 0;
     width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item.left {
     left: 0;
+    text-align: right;
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item.right {
     left: 50%;
+    text-align: left;
 }
 
 .timeline-item-content {
     position: relative;
-    padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.15); /* Feature card background color */
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 8px;
-    text-align: left;
-    color: white; /* Text color */
+    padding: 20px;
+    color: white;
+    z-index: 2;
     transition: transform 0.3s ease;
 }
 
-.timeline-item:nth-child(even) .timeline-item-content {
-    text-align: right;
+.timeline-item-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-item .circle {
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background-color: #64ffda;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.timeline-item.left .circle {
+    right: -8px;
+}
+
+.timeline-item.right .circle {
+    left: -8px;
 }
 
 .timeline-item .date {
-    margin-top: 5px;
+    display: block;
+    margin-top: 10px;
     font-size: 0.85em;
-    color: gray; /* Subtle date color */
+    color: gray;
 }
 
-.timeline-item-content:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        width: 100%;
+        padding-left: 30px;
+        text-align: left;
+        left: 0;
+    }
+
+    .timeline-item .circle {
+        left: -23px;
+    }
 }
 
 .cookie-banner {
