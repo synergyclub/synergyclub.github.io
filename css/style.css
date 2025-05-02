@@ -219,11 +219,13 @@ body.dark-mode .feature-card-main {
     text-align: right;
 }
 
+/* Adjusting the dots to align with the timeline line */
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 100; /* Aligns dots to the timeline line */
-    transform: translateX(-100);
+    top: 50%; /* Aligns dots to the vertical center of the timeline line */
+    left: calc(50% - 2px); /* Centers dots on the timeline line */
+    transform: translateY(-50%); /* Centers the dot vertically */
     width: 16px;
     height: 16px;
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent dot */
@@ -232,8 +234,9 @@ body.dark-mode .feature-card-main {
     z-index: 1;
 }
 
+/* Ensures even timeline items have the same alignment */
 .timeline-item:nth-child(even)::before {
-    left: 50%; /* Centers dots on the line */
+    left: calc(50% - 2px); /* Centers dots on the timeline line */
 }
 
 .timeline-item .date {
