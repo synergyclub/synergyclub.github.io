@@ -221,21 +221,6 @@ body.dark-mode .feature-card-main {
     text-align: right;
 }
 
-/* Adjusting the dots to align with the timeline line */
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 50%; /* Aligns the dot vertically in the middle of the timeline line */
-    left: 50%; /* Centers the dot on the timeline line */
-    transform: translate(-50%, -50%); /* Centers the dot both horizontally and vertically */
-    width: 16px;
-    height: 16px;
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent dot */
-    border-radius: 50%;
-    border: 4px solid #696969; /* Dark border for contrast */
-    z-index: 2; /* Ensures the dot is above the timeline line */
-}
-
 /* Ensures even timeline items have the same alignment */
 .timeline-item:nth-child(even)::before {
     left: 50%; /* Centers dots on the timeline line */
