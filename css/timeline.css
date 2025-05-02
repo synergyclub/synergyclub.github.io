@@ -1,0 +1,54 @@
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #ccc;
+    transform: translateX(-50%);
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-content {
+    position: relative;
+    width: 200px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.timeline-entry {
+    margin-top: 40px; /* Space for the dot */
+}
+
+.timeline-entry:nth-child(odd) .timeline-dot {
+    left: 50%;
+}
+
+.timeline-entry:nth-child(even) .timeline-dot {
+    left: 50%;
+    top: 40px; /* Adjust for even entries */
+}
+
+.timeline-entry:nth-child(odd) .timeline-content {
+    left: calc(50% + 30px); /* Position content to the right */
+}
+
+.timeline-entry:nth-child(even) .timeline-content {
+    left: calc(50% - 230px); /* Position content to the left */
+}
