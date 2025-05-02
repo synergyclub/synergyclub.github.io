@@ -1,7 +1,7 @@
 /* General styles for the navigation bar */
 
 nav {
-    background-color: #fff; /* Background color of the navigation bar */
+    background-color: #0019a5; /* Background color of the navigation bar */
     padding: 10px 20px; /* Padding around the navigation items */
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
