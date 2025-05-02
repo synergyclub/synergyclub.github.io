@@ -189,6 +189,7 @@ body.dark-mode .feature-card-main {
     width: 4px;
     height: 100%;
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent line */
+    transform: translateX(-50%); /* Centers the line horizontally */
 }
 
 .timeline-item {
@@ -223,9 +224,9 @@ body.dark-mode .feature-card-main {
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 50%; /* Aligns dots to the vertical center of the timeline line */
-    left: calc(50% - 2px); /* Centers dots on the timeline line */
-    transform: translateY(-50%); /* Centers the dot vertically */
+    top: 0; /* Aligns the dot with the top of the timeline line */
+    left: 50%; /* Centers the dot on the timeline line */
+    transform: translate(-50%, -50%); /* Centers the dot both horizontally and vertically */
     width: 16px;
     height: 16px;
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent dot */
@@ -236,7 +237,7 @@ body.dark-mode .feature-card-main {
 
 /* Ensures even timeline items have the same alignment */
 .timeline-item:nth-child(even)::before {
-    left: calc(50% - 2px); /* Centers dots on the timeline line */
+    left: 50%; /* Centers dots on the timeline line */
 }
 
 .timeline-item .date {
