@@ -35,6 +35,51 @@
         background-position: 0% center;
       }
     }
+
+    /* General mobile styles */
+    @media (max-width: 768px) {
+      body {
+        font-size: 1rem; /* Adjust font size for readability */
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-logo {
+        margin-bottom: 1rem;
+      }
+
+      .features {
+        grid-template-columns: 1fr; /* Single-column layout */
+        gap: 1rem;
+      }
+
+      .feature-card {
+        padding: 1rem;
+      }
+
+      .team-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team-card {
+        margin-bottom: 1rem;
+      }
+
+      .cookie-banner {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body class="forced-white-links">
@@ -162,16 +207,4 @@
         </div>
         <!-- Team Member 3 -->
         <div class="team-card">
-          <img src="assets/images/member3.jpg" alt="Team Member 3" class="team-photo" />
-          <h3>Emily Johnson</h3>
-          <p>Design Specialist</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="cookie-banner" class="cookie-banner">
-    <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
-    <button id="accept-cookies" class="cookie-button">Accept</button>
-  </div>
-</body>
-</html>
+          <img src="assets/images/member3.jpg" alt="Team Member 3" class="team-photo
