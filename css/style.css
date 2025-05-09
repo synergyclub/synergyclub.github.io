@@ -207,6 +207,71 @@ body.dark-mode .feature-card-main {
     transition: transform 0.3s ease; /* Lift effect on hover */
 }
 
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Adjusted to appear below the top bar */
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: calc(100% - 60px); /* Adjust height to exclude the top bar */
+  background-color: #0a192f;
+  color: white;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #64ffda;
+}
+
+.sidebar.show {
+  left: 0; /* Show sidebar */
+}
+
+/* Top bar styles */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Adjusted height */
+  background-color: rgba(10, 25, 47, 0.9);
+  z-index: 10;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
 /* Team section styles */
 .team-section {
   margin: 50px auto;
@@ -472,4 +537,94 @@ body.dark-mode .feature-card-main {
 #to-top-btn:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
   background-color: #52e0c4;
+}
+
+/* General mobile styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  /* Top bar adjustments for mobile */
+  .top-bar {
+    flex-direction: column; /* Stack elements vertically */
+    height: auto; /* Adjust height */
+    padding: 0.5rem; /* Reduce padding */
+  }
+
+  .site-title {
+    font-size: 1.2rem; /* Smaller title size */
+    margin-bottom: 0.5rem; /* Add spacing below the title */
+  }
+
+  .nav-link {
+    font-size: 1rem; /* Adjust button size */
+    padding: 0.3rem 0.8rem; /* Reduce padding */
+  }
+
+  /* Sidebar adjustments for mobile */
+  .sidebar {
+    width: 200px; /* Narrower sidebar */
+  }
+
+  .sidebar ul {
+    padding: 50px 0 0; /* Adjust padding for smaller screens */
+  }
+
+  .sidebar ul li {
+    padding: 10px 15px; /* Reduce padding for list items */
+  }
+
+  .sidebar ul li a {
+    font-size: 0.9rem; /* Smaller font size for links */
+  }
+
+  /* Content adjustments for mobile */
+  .content {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 1rem; /* Adjust spacing */
+  }
+
+  .feature-card {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .team-cards {
+    flex-direction: column; /* Stack team cards vertically */
+    align-items: center; /* Center-align team cards */
+  }
+
+  .team-card {
+    margin-bottom: 1rem; /* Add spacing between cards */
+  }
+
+  /* Timeline adjustments for mobile */
+  .timeline-container {
+    padding: 10px 0; /* Reduce padding */
+  }
+
+  .timeline-item {
+    width: 100%; /* Full width for timeline items */
+    padding: 0 10px; /* Add padding for spacing */
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    transform: none; /* Remove transform for simpler layout */
+  }
+
+  .timeline-content {
+    padding: 15px; /* Reduce padding */
+  }
+
+  /* Scroll to Top Button */
+  #to-top-btn {
+    width: 40px; /* Smaller button */
+    height: 40px; /* Smaller button */
+    font-size: 1.2rem; /* Adjust font size */
+  }
 }

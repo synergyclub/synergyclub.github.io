@@ -13,6 +13,7 @@
   <script src="js/cookie-banner.js" defer></script>
   <script src="js/scroll-animations.js" defer></script>
   <script src="js/scroll-to-top.js" defer></script>
+  <script src="js/sidebar.js" defer></script>
   <!-- Inline styles for the animated rainbow text -->
   <style>
     .main-content h1 {
@@ -84,42 +85,28 @@
   </style>
 </head>
 <body class="forced-white-links">
-  <nav style="position: relative; z-index: 10;">
-    <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
     <ul>
-      <li>
-        <button onclick="window.location.href='index.html'" role="link" aria-label="Home" class="nav-link">
-          Home
-        </button>
-      </li>
-      <li>
-        <button onclick="window.location.href='projectupdates.html'" role="link" aria-label="Project Updates" class="nav-link">
-          Project Updates
-        </button>
-      </li>
-      <li>
-        <button onclick="window.location.href='mission.html'" role="link" aria-label="Our Mission" class="nav-link">
-          Our Mission
-        </button>
-      </li>
-      <li>
-        <button onclick="window.location.href='info.html'" role="link" aria-label="Info" class="nav-link">
-          Info
-        </button>
-      </li>
-      <li>
-        <button onclick="window.location.href='about.html'" role="link" aria-label="About Us" class="nav-link">
-          About Us
-        </button>
-      </li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="projectupdates.html">📈 Project Updates</a></li>
+      <li><a href="mission.html">🌍 Our Mission</a></li>
+      <li><a href="info.html">ℹ️ Info</a></li>
+      <li><a href="about.html">👥 About Us</a></li>
     </ul>
+  </div>
+
+  <!-- Top Bar -->
+  <nav class="top-bar">
+    <button id="sidebar-toggle" class="nav-link" aria-label="Toggle Sidebar">⚡</button>
+    <h1 class="site-title">⚡ Synergy ⚡</h1>
     <button id="theme-switcher" class="nav-link theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
   </nav>
 
   <div id="particles-js"></div>
   <div class="content main-content" style="position: relative; z-index: 5;">
-    <h1>Welcome to Synergy</h1>
-    <p>Revolutionizing the way you power your computers</p>
+    <h1>🎉 Welcome to Synergy 🎉</h1>
+    <p>Revolutionizing the way you power your computers ⚡💻</p>
     <div style="text-align: center; margin-top: 20px;">
       <!-- Buy me a Coffee -->
       <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">
@@ -140,21 +127,21 @@
     </div>
     <div class="features">
       <div class="feature-card-main">
-        <h3>Past Technology</h3>
+        <h3>🔧 Past Technology</h3>
         <p>
-          Mr. Ward from Strath Haven Middle School tackles environmental issues and addresses educational challenges by forming a club. This club creates a portable robot powered by solar panels, enabling them to charge their Chromebooks anywhere. Ultimately, this ensures better focus and learning opportunities while promoting the use of renewable energy.
+          Mr. Ward from Strath Haven Middle School tackles environmental issues and addresses educational challenges by forming a club. This club creates a portable robot powered by solar panels, enabling them to charge their Chromebooks anywhere. 🌞🔋
         </p>
       </div>
       <div class="feature-card-main">
-        <h3>Present Technology</h3>
+        <h3>⚙️ Present Technology</h3>
         <p>
-          Synergy is conducting battery research and developing a website to share our designs. We aim to collaborate with the community and connect with teachers in both middle and high schools, fostering a collective exchange of ideas and insights as we prepare to showcase our work.
+          Synergy is conducting battery research and developing a website to share our designs. We aim to collaborate with the community and connect with teachers in both middle and high schools, fostering a collective exchange of ideas and insights as we prepare to showcase our work. 🤝💡
         </p>
       </div>
       <div class="feature-card-main">
-        <h3>Future Technology</h3>
+        <h3>🚀 Future Technology</h3>
         <p>
-          At Strath Haven Middle School, students face battery issues with their Chromebooks. The Synergy club is designing portable laptop chargers called Rick Rolls (RR) to address this. The team aims to create smaller, lighter, 3D-printable chargers with greater capacity, enabling efficient charging for multiple devices in every classroom.
+          At Strath Haven Middle School, students face battery issues with their Chromebooks. The Synergy club is designing portable laptop chargers called Rick Rolls (RR) to address this. The team aims to create smaller, lighter, 3D-printable chargers with greater capacity, enabling efficient charging for multiple devices in every classroom. 🔋📚
         </p>
       </div>
     </div>
@@ -167,7 +154,7 @@
           <div class="timeline-content">
             <div class="timeline-date">🚀 January 2023</div>
             <h3 class="timeline-title">Project Inception</h3>
-            <p>Synergy Club was founded to address Chromebook charging issues at Strath Haven Middle School.</p>
+            <p>Synergy Club was founded to address Chromebook charging issues at Strath Haven Middle School. 💡</p>
           </div>
         </div>
         
@@ -176,7 +163,7 @@
           <div class="timeline-content">
             <div class="timeline-date">⚡ March 2023</div>
             <h3 class="timeline-title">First Prototype</h3>
-            <p>Development of our first portable charger prototype, the Rick Roll (RR).</p>
+            <p>Development of our first portable charger prototype, the Rick Roll (RR). 🛠️</p>
           </div>
         </div>
         
@@ -185,32 +172,32 @@
           <div class="timeline-content">
             <div class="timeline-date">🤝 June 2023</div>
             <h3 class="timeline-title">Community Outreach</h3>
-            <p>Started collaborating with teachers and students to improve our designs.</p>
+            <p>Started collaborating with teachers and students to improve our designs. 🌟</p>
           </div>
         </div>
       </div>
     </div>
 
     <div class="team-section">
-      <h2 style="text-align: center; margin-bottom: 20px;">Meet Our Team</h2>
+      <h2 style="text-align: center; margin-bottom: 20px;">👥 Meet Our Team</h2>
       <div class="team-cards">
         <!-- Team Member 1 -->
         <div class="team-card">
           <img src="assets/images/member1.jpg" alt="Team Member 1" class="team-photo" />
           <h3>John Doe</h3>
-          <p>Founder & Lead Engineer</p>
+          <p>Founder & Lead Engineer ⚙️</p>
         </div>
         <!-- Team Member 2 -->
         <div class="team-card">
           <img src="assets/images/member2.jpg" alt="Team Member 2" class="team-photo" />
           <h3>Jane Smith</h3>
-          <p>Project Manager</p>
+          <p>Project Manager 📋</p>
         </div>
         <!-- Team Member 3 -->
         <div class="team-card">
           <img src="assets/images/member3.jpg" alt="Team Member 3" class="team-photo" />
           <h3>Emily Johnson</h3>
-          <p>Lead Designer</p>
+          <p>Lead Designer 🎨</p>
         </div>
       </div>
     </div>
