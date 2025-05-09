@@ -435,3 +435,41 @@ body.dark-mode .feature-card-main {
   animation: fadeInUp 0.8s ease forwards;
   animation-delay: 0.2s;
 }
+
+/* Scroll to Top Button */
+#to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #64ffda;
+  color: #0a192f;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction when hidden */
+  z-index: 1000;
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth appearance and disappearance */
+}
+
+#to-top-btn.show {
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Allow interaction */
+  transform: translateY(0); /* Reset position */
+}
+
+#to-top-btn.hide {
+  opacity: 0; /* Fully hidden */
+  pointer-events: none; /* Prevent interaction */
+  transform: translateY(20px); /* Slide down slightly */
+}
+
+#to-top-btn:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  background-color: #52e0c4;
+}
