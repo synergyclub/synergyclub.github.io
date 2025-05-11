@@ -262,7 +262,8 @@ body.dark-mode .feature-card-main {
   padding: 0;
   margin-right: 10px;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1101; /* Ensure above sidebar */
+  position: relative;
 }
 
 .waffle-bar {
@@ -272,7 +273,20 @@ body.dark-mode .feature-card-main {
   margin: 3px 0;
   background-color: #fff;
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  position: relative;
+}
+
+/* Morph to X when open */
+.waffle-menu.open .waffle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.waffle-menu.open .waffle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.5);
+}
+.waffle-menu.open .waffle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Optional: Animate waffle to X when sidebar is open */
@@ -589,6 +603,8 @@ body.dark-mode .feature-card-main {
     height: auto;
     padding: 0.3rem 0.5rem;
     align-items: stretch;
+    position: fixed;
+    z-index: 1100;
   }
 
   .site-title {
@@ -613,6 +629,7 @@ body.dark-mode .feature-card-main {
     top: 0;
     height: 100vh;
     padding-top: 60px;
+    z-index: 1000;
   }
   .sidebar.show {
     left: 0;
@@ -626,6 +643,14 @@ body.dark-mode .feature-card-main {
   }
   .sidebar ul li a {
     font-size: 1rem;
+  }
+
+  /* Waffle menu adjustments for mobile */
+  .waffle-menu {
+    z-index: 1101;
+    position: fixed;
+    left: 10px;
+    top: 10px;
   }
 
   /* Content adjustments for mobile */
