@@ -216,7 +216,7 @@ body.dark-mode .feature-card-main {
   height: calc(100% - 60px); /* Adjust height to exclude the top bar */
   background-color: #0a192f;
   color: white;
-  z-index: 1000;
+  z-index: 1000; /* Lower than waffle menu */
   transition: left 0.3s ease;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   overflow-y: auto; /* Enable scrolling for long content */
@@ -262,8 +262,10 @@ body.dark-mode .feature-card-main {
   padding: 0;
   margin-right: 10px;
   cursor: pointer;
-  z-index: 1102; /* Ensure above sidebar */
-  position: relative;
+  z-index: 2000; /* Much higher than sidebar */
+  position: fixed; /* Always fixed so it's above sidebar */
+  left: 18px;
+  top: 18px;
 }
 
 .waffle-bar {
@@ -275,12 +277,11 @@ body.dark-mode .feature-card-main {
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(.4,2,.6,1);
   position: relative;
-  z-index: 1101; /* Ensure below waffel */
+  z-index: 2001;
   transform-origin: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Morph to X when open */
+/* === MORPH ANIMATION: Hamburger to X === */
 .waffle-menu.open .waffle-bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -291,17 +292,7 @@ body.dark-mode .feature-card-main {
 .waffle-menu.open .waffle-bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
-
-/* Optional: Animate waffle to X when sidebar is open */
-.sidebar.show ~ .top-bar .waffle-menu .waffle-bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.sidebar.show ~ .top-bar .waffle-menu .waffle-bar:nth-child(2) {
-  opacity: 0;
-}
-.sidebar.show ~ .top-bar .waffle-menu .waffle-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
+/* === END MORPH ANIMATION === */
 
 /* Top bar styles */
 .top-bar {
@@ -310,7 +301,7 @@ body.dark-mode .feature-card-main {
   width: 100%;
   height: 60px; /* Adjusted height */
   background-color: rgba(10, 25, 47, 0.9);
-  z-index: 10;
+  z-index: 100; /* Lower than waffle menu and sidebar */
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -624,6 +615,7 @@ body.dark-mode .feature-card-main {
 
   /* Sidebar adjustments for mobile */
   .sidebar {
+    z-index: 1000;
     width: 100vw; /* Full width overlay */
     left: -100vw;
     background-color: rgba(10, 25, 47, 0.97); /* More overlay effect */
@@ -632,7 +624,6 @@ body.dark-mode .feature-card-main {
     top: 0;
     height: 100vh;
     padding-top: 60px;
-    z-index: 1000;
   }
   .sidebar.show {
     left: 0;
@@ -650,10 +641,10 @@ body.dark-mode .feature-card-main {
 
   /* Waffle menu adjustments for mobile */
   .waffle-menu {
-    z-index: 1101;
+    z-index: 2000;
     position: fixed;
-    left: 10px;
-    top: 10px;
+    left: 18px;
+    top: 18px;
   }
 
   /* Content adjustments for mobile */
