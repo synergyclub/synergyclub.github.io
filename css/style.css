@@ -262,7 +262,7 @@ body.dark-mode .feature-card-main {
   padding: 0;
   margin-right: 10px;
   cursor: pointer;
-  z-index: 1101; /* Ensure above sidebar */
+  z-index: 1102; /* Ensure above sidebar */
   position: relative;
 }
 
@@ -275,6 +275,9 @@ body.dark-mode .feature-card-main {
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(.4,2,.6,1);
   position: relative;
+  z-index: 1101; /* Ensure below waffel */
+  transform-origin: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Morph to X when open */
