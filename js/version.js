@@ -1,5 +1,5 @@
 // Set the version number here
-const SYNERGY_VERSION = "1.0.0";
+const SYNERGY_VERSION = "1.0.1";
 
 // Wait for DOMContentLoaded to ensure footer exists
 document.addEventListener("DOMContentLoaded", function () {
