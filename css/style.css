@@ -542,89 +542,173 @@ body.dark-mode .feature-card-main {
 /* General mobile styles */
 @media (max-width: 768px) {
   body {
-    font-size: 1rem; /* Adjust font size for readability */
+    font-size: 0.95rem; /* Slightly smaller font size */
+    padding: 0;
   }
 
   /* Top bar adjustments for mobile */
   .top-bar {
-    flex-direction: column; /* Stack elements vertically */
-    height: auto; /* Adjust height */
-    padding: 0.5rem; /* Reduce padding */
+    flex-direction: column;
+    height: auto;
+    padding: 0.3rem 0.5rem;
+    align-items: stretch;
   }
 
   .site-title {
-    font-size: 1.2rem; /* Smaller title size */
-    margin-bottom: 0.5rem; /* Add spacing below the title */
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+    padding-left: 0.5rem;
   }
 
   .nav-link {
-    font-size: 1rem; /* Adjust button size */
-    padding: 0.3rem 0.8rem; /* Reduce padding */
+    font-size: 0.95rem;
+    padding: 0.2rem 0.5rem;
   }
 
   /* Sidebar adjustments for mobile */
   .sidebar {
-    width: 200px; /* Narrower sidebar */
+    width: 100vw; /* Full width overlay */
+    left: -100vw;
+    background-color: rgba(10, 25, 47, 0.97); /* More overlay effect */
+    box-shadow: none;
+    transition: left 0.3s ease;
+    top: 0;
+    height: 100vh;
+    padding-top: 60px;
   }
-
+  .sidebar.show {
+    left: 0;
+  }
   .sidebar ul {
-    padding: 50px 0 0; /* Adjust padding for smaller screens */
+    padding: 30px 0 0;
   }
-
   .sidebar ul li {
-    padding: 10px 15px; /* Reduce padding for list items */
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
-
   .sidebar ul li a {
-    font-size: 0.9rem; /* Smaller font size for links */
+    font-size: 1rem;
   }
 
   /* Content adjustments for mobile */
   .content {
-    padding: 1rem; /* Reduce padding */
+    padding: 0.5rem;
+    font-size: 0.98rem;
   }
 
   .features {
-    grid-template-columns: 1fr; /* Single-column layout */
-    gap: 1rem; /* Adjust spacing */
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    margin-top: 1rem;
   }
 
-  .feature-card {
-    padding: 1rem; /* Reduce padding */
+  .feature-card, .feature-card-main {
+    padding: 0.7rem;
+    font-size: 0.97rem;
+  }
+
+  .team-section {
+    margin: 30px auto;
+    padding: 10px;
   }
 
   .team-cards {
-    flex-direction: column; /* Stack team cards vertically */
-    align-items: center; /* Center-align team cards */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding-top: 10px;
   }
 
   .team-card {
-    margin-bottom: 1rem; /* Add spacing between cards */
+    margin-bottom: 0.7rem;
+    padding: 12px;
+    width: 100%;
+    min-width: 0;
+    font-size: 0.97rem;
+  }
+
+  .team-photo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 7px;
+  }
+
+  .team-card h3 {
+    font-size: 1rem;
+    margin: 7px 0;
+  }
+
+  .team-card p {
+    font-size: 0.85rem;
   }
 
   /* Timeline adjustments for mobile */
+  .timeline-section {
+    margin: 40px auto;
+    padding: 10px;
+    max-width: 100vw;
+  }
+
   .timeline-container {
-    padding: 10px 0; /* Reduce padding */
+    padding: 5px 0;
   }
 
   .timeline-item {
-    width: 100%; /* Full width for timeline items */
-    padding: 0 10px; /* Add padding for spacing */
+    width: 100%;
+    padding: 0 2px;
+    margin: 25px 0;
   }
 
   .timeline-item.left,
   .timeline-item.right {
-    transform: none; /* Remove transform for simpler layout */
+    left: 0;
+    padding: 0;
+    transform: none;
   }
 
   .timeline-content {
-    padding: 15px; /* Reduce padding */
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .timeline-content::before,
+  .timeline-content::after {
+    display: none; /* Hide dots and lines for simplicity */
+  }
+
+  .timeline-container::before {
+    left: 10px;
+    width: 2px;
+    background: #64ffda;
+    transform: none;
   }
 
   /* Scroll to Top Button */
   #to-top-btn {
-    width: 40px; /* Smaller button */
-    height: 40px; /* Smaller button */
-    font-size: 1.2rem; /* Adjust font size */
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    bottom: 12px;
+    right: 12px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 0.9rem;
+    padding-left: 0.2rem;
+  }
+  .team-photo {
+    width: 55px;
+    height: 55px;
+  }
+  .feature-card, .feature-card-main {
+    padding: 0.5rem;
+  }
+  .timeline-content {
+    padding: 7px;
+    font-size: 0.92rem;
   }
 }
