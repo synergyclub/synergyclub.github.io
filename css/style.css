@@ -249,6 +249,43 @@ body.dark-mode .feature-card-main {
   left: 0; /* Show sidebar */
 }
 
+/* Waffle (hamburger) menu styles */
+.waffle-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.waffle-bar {
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 3px 0;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Optional: Animate waffle to X when sidebar is open */
+.sidebar.show ~ .top-bar .waffle-menu .waffle-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.sidebar.show ~ .top-bar .waffle-menu .waffle-bar:nth-child(2) {
+  opacity: 0;
+}
+.sidebar.show ~ .top-bar .waffle-menu .waffle-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
 /* Top bar styles */
 .top-bar {
   position: fixed;
