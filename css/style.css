@@ -113,23 +113,15 @@ h1 {
     margin-top: 2rem;
 }
 
-.feature-card {
-    background-color: rgba(255, 255, 255, 0.15);
-    padding: 1.5rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
-}
-
+.feature-card,
 .feature-card-main {
     background-color: rgba(255, 255, 255, 0.15);
-    padding: 1.5rem;
     border-radius: 8px;
+    padding: 1.5rem;
     transition: transform 0.3s ease;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .feature-card:hover {
@@ -465,12 +457,14 @@ body.dark-mode .feature-card-main {
 }
 
 .timeline-content {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
   padding: 25px;
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(100, 255, 218, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Dots on the timeline */
