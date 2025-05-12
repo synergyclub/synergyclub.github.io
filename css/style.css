@@ -441,8 +441,8 @@ body.dark-mode .feature-card-main {
 /* Right side alignment */
 .timeline-item.right {
   left: 50%;
-  padding-left: 40px;
-  transform: translateX(100px);
+  padding-left: 0;
+  transform: none;
 }
 
 /* Active state for animations */
@@ -475,70 +475,20 @@ body.dark-mode .feature-card-main {
   transform: translateY(-50%);
 }
 
-/* Position dots: precisely center on the timeline line */
+/* Left side: dot overlaps the timeline line */
 .timeline-item.left .timeline-content::before {
-  right: -18px; /* Half dot width (8px) + border (3px) + line width (2px) + 5px fudge for perfect overlap */
+  right: -9px;
 }
 
-.timeline-item.right .timeline-content::before {
-  left: -18px;
-}
-
-/* Connecting lines: extend to the center of the dot */
-.timeline-content::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 18px; /* Match the offset of the dot */
-  height: 2px;
-  background: #64ffda;
-  transform: translateY(-50%);
-}
-
-.timeline-item.left .timeline-content::after {
-  right: -18px;
-}
-
-.timeline-item.right .timeline-content::after {
-  left: -18px;
-}
-
-/* Position dots: precisely align with the center line */
-.timeline-item.left .timeline-content::before {
-  right: -9px; /* 2px(line) + 3px(border) + 3px(border) = 8px, so -9px centers the dot */
-}
-
+/* Right side: dot overlaps the timeline line */
 .timeline-item.right .timeline-content::before {
   left: -9px;
 }
 
-/* Connecting lines */
+/* Remove the connecting lines from cards to dots */
 .timeline-content::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  background: #64ffda;
+  display: none !important;
 }
-
-/* Position connecting lines */
-.timeline-item.left .timeline-content::after {
-  right: -30px;
-}
-
-.timeline-item.right .timeline-content::after {
-  left: -30px;
-}
-
-/*
-.timeline-item.left:nth-child(odd) .timeline-content::before {
-  right: -38px;
-}
-.timeline-item.left:nth-child(even) .timeline-content::before {
-  right: -20px;
-}
-*/
 
 /* Update stagger delays */
 .timeline-item:nth-child(1).active { transition-delay: 0.1s; }
