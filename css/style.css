@@ -472,17 +472,17 @@ body.dark-mode .feature-card-main {
   border: 3px solid #0a192f;
   top: 50%;
   z-index: 2;
+  /* Remove old transforms and use precise centering */
+  transform: translateY(-50%);
 }
 
-/* Position dots */
+/* Position dots: precisely align with the center line */
 .timeline-item.left .timeline-content::before {
-  right: -48px;
-  transform: translate(50%, -50%);
+  right: -9px; /* 2px(line) + 3px(border) + 3px(border) = 8px, so -9px centers the dot */
 }
 
 .timeline-item.right .timeline-content::before {
-  left: -48px;
-  transform: translate(-50%, -50%);
+  left: -9px;
 }
 
 /* Connecting lines */
