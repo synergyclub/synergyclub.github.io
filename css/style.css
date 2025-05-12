@@ -446,7 +446,12 @@ body.dark-mode .feature-card-main {
 .timeline-item.right {
   left: 50%;
   padding-left: 0;
-  transform: none;
+  /* Restore slide-in animation for right cards */
+  transform: translateX(100px);
+  transition: all 0.6s ease;
+}
+.timeline-item.right.active {
+  transform: translateX(0);
 }
 
 /* Active state for animations */
