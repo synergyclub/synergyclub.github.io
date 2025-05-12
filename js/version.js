@@ -1,4 +1,5 @@
-const SYNERGY_VERSION = "1.0.4";
+const SYNERGY_VERSION = "1.1.0";
+
 document.addEventListener("DOMContentLoaded", function () {
   let footer = document.querySelector("footer[data-version]");
   if (!footer) {
