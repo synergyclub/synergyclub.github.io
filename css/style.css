@@ -118,6 +118,8 @@ h1 {
     padding: 1.5rem;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
 
 .feature-card-main {
@@ -126,6 +128,8 @@ h1 {
     border-radius: 8px;
     transition: transform 0.3s ease;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
 
 .feature-card:hover {
@@ -454,6 +458,7 @@ body.dark-mode .feature-card-main {
 .timeline-content {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
   border-radius: 12px;
   padding: 25px;
   position: relative;
