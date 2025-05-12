@@ -439,6 +439,8 @@ body.dark-mode .feature-card-main {
 .timeline-item.left {
   left: 0;
   padding-right: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
   transform: translateX(-100px);
 }
 
@@ -446,6 +448,8 @@ body.dark-mode .feature-card-main {
 .timeline-item.right {
   left: 50%;
   padding-left: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
   /* Restore slide-in animation for right cards */
   transform: translateX(100px);
   transition: all 0.6s ease;
@@ -462,8 +466,6 @@ body.dark-mode .feature-card-main {
 
 .timeline-content {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
   border-radius: 12px;
   padding: 25px;
   position: relative;
