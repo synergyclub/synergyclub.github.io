@@ -533,10 +533,10 @@ body.dark-mode .feature-card-main {
 
 /* Example: Move left and right timeline dots individually using nth-child */
 .timeline-item.left:nth-child(odd) .timeline-content::before {
-  right: -24px; /* Custom offset for odd left items */
+  right: -38px; /* Custom offset for odd left items */
 }
 .timeline-item.left:nth-child(even) .timeline-content::before {
-  right: -4px; /* Custom offset for even left items */
+  right: -20px; /* Custom offset for even left items */
 }
 
 /* Update stagger delays */
