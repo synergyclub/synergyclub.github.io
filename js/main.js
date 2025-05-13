@@ -81,4 +81,33 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.toggle('open');
         });
     }
+
+    const konamiCode = [
+        'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+        'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+        'b', 'a'
+    ];
+    let konamiIndex = 0;
+    document.addEventListener('keydown', function(e) {
+        const key = e.key;
+        if (key === konamiCode[konamiIndex] || (konamiIndex >= 8 && key.toLowerCase() === konamiCode[konamiIndex])) {
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                konamiIndex = 0;
+                if (!document.getElementById('sg_ovl')) {
+                    // Dynamically load obfuscated snake file and show overlay
+                    const script = document.createElement('script');
+                    script.src = 'js/x1y2z3.js'; // obfuscated file name
+                    script.onload = function() {
+                        if (typeof __x1y2z3 === 'function') __x1y2z3();
+                    };
+                    document.body.appendChild(script);
+                } else {
+                    document.getElementById('sg_ovl').style.display = 'flex';
+                }
+            }
+        } else {
+            konamiIndex = 0;
+        }
+    });
 });
