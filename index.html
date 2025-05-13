@@ -11,9 +11,10 @@
   <script src="js/particles.js"></script>
 </head>
 <body class="forced-white-links">
-  <!-- Synergy Dev Banner -->
-  <div style="background: #ffeb3b; color: #222; text-align: center; padding: 12px 0; font-weight: bold; font-size: 1.1rem; border-bottom: 2px solid #fbc02d; z-index: 2000; position: relative;">
-    Synergy website devs! Please use the new <u>_testing_</u> branch in github to update the website then push to <u>_main_</u> for publishing!
+  <!-- Synergy Dev Banner (above nav bar) -->
+  <div id="dev-banner" style="background: #ffeb3b; color: #222; text-align: center; padding: 12px 0; font-weight: bold; font-size: 1.1rem; border-bottom: 2px solid #fbc02d; z-index: 2001; position: relative;">
+    <span>Synergy website devs! Please use the new <u>_testing_</u> branch in github to update the website then push to <u>_main_</u> for publishing!</span>
+    <button id="close-dev-banner" aria-label="Close banner" style="position: absolute; right: 18px; top: 8px; background: none; border: none; font-size: 1.3rem; color: #222; cursor: pointer; font-weight: bold; line-height: 1;">×</button>
   </div>
   <!-- Sidebar -->
   <div id="sidebar" class="sidebar">
@@ -138,6 +139,18 @@
   </div>
 
   <button id="to-top-btn" aria-label="Scroll to Top">⬆</button>
+  <script>
+    // Close banner logic
+    document.addEventListener('DOMContentLoaded', function() {
+      var closeBtn = document.getElementById('close-dev-banner');
+      var banner = document.getElementById('dev-banner');
+      if (closeBtn && banner) {
+        closeBtn.addEventListener('click', function() {
+          banner.style.display = 'none';
+        });
+      }
+    });
+  </script>
   <script src="js/main.js" defer></script>
   <script src="js/version.js"></script>
   <footer data-version></footer>
