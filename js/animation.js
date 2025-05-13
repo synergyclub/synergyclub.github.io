@@ -101,6 +101,16 @@ function _sg_start() {
         setTimeout(_sg_loop, 100);
     }
 
+    // Prevent arrow keys from scrolling the page when overlay is open
+    window.addEventListener('keydown', function(e) {
+        const overlay = document.getElementById('sg_ovl');
+        if (overlay && overlay.style.display === 'flex') {
+            if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)) {
+                e.preventDefault();
+            }
+        }
+    }, { passive: false });
+
     document.onkeydown = function(e) {
         if (o && (e.key === 'Enter' || e.key === ' ')) {
             s = [{x: 10, y: 10}];
