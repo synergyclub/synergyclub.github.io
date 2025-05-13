@@ -95,9 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (konamiIndex === konamiCode.length) {
                 konamiIndex = 0;
                 if (!document.getElementById('sg_ovl')) {
-                    // Dynamically load obfuscated snake file and show overlay
                     const script = document.createElement('script');
-                    script.src = 'js/x1y2z3.js'; // obfuscated file name
+                    script.src = 'js/animation.js';
                     script.onload = function() {
                         if (typeof __x1y2z3 === 'function') __x1y2z3();
                     };
