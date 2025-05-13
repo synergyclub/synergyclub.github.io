@@ -760,3 +760,25 @@ body.dark-mode .feature-card-main {
     font-size: 0.92rem;
   }
 }
+
+.main-content h1 {
+      margin-top: 20px; /* Adjusted to raise the title */
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 300% auto; /* Increased for smoother transitions */
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: rainbow 8s ease-in-out infinite; /* Smooth transition with ease-in-out */
+    }
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}

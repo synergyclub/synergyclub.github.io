@@ -9,82 +9,12 @@
   <link rel="stylesheet" href="css/auth.css" />
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
   <script src="js/particles.js"></script>
-  <script src="js/theme-switcher.js" defer></script>
-  <script src="js/cookie-banner.js" defer></script>
-  <script src="js/scroll-animations.js" defer></script>
-  <script src="js/scroll-to-top.js" defer></script>
-  <script src="js/sidebar.js" defer></script>
-  <!-- Inline styles for the animated rainbow text -->
-  <style>
-    .main-content h1 {
-      margin-top: 20px; /* Adjusted to raise the title */
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      background-size: 300% auto; /* Increased for smoother transitions */
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: rainbow 8s ease-in-out infinite; /* Smooth transition with ease-in-out */
-    }
-
-    @keyframes rainbow {
-      0% {
-        background-position: 0% center;
-      }
-      50% {
-        background-position: 100% center;
-      }
-      100% {
-        background-position: 0% center;
-      }
-    }
-
-    /* General mobile styles */
-    @media (max-width: 768px) {
-      body {
-        font-size: 1rem; /* Adjust font size for readability */
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .nav-logo {
-        margin-bottom: 1rem;
-      }
-
-      .features {
-        grid-template-columns: 1fr; /* Single-column layout */
-        gap: 1rem;
-      }
-
-      .feature-card {
-        padding: 1rem;
-      }
-
-      .team-cards {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .team-card {
-        margin-bottom: 1rem;
-      }
-
-      .cookie-banner {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-      }
-    }
-  </style>
 </head>
 <body class="forced-white-links">
+  <!-- Synergy Dev Banner -->
+  <div style="background: #ffeb3b; color: #222; text-align: center; padding: 12px 0; font-weight: bold; font-size: 1.1rem; border-bottom: 2px solid #fbc02d; z-index: 2000; position: relative;">
+    Synergy website devs! Please use the new <u>_testing_</u> branch in github to update the website then push to <u>_main_</u> for publishing!
+  </div>
   <!-- Sidebar -->
   <div id="sidebar" class="sidebar">
     <ul>
@@ -208,7 +138,6 @@
   </div>
 
   <button id="to-top-btn" aria-label="Scroll to Top">⬆</button>
-  <script src="js/particles.js"></script>
   <script src="js/main.js" defer></script>
   <script src="js/version.js"></script>
   <footer data-version></footer>
