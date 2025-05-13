@@ -23,6 +23,11 @@ function __x1y2z3() {
                 <button id="g_snake" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Snake</button>
                 <button id="g_pong" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Pong</button>
                 <button id="g_brk" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Breakout</button>
+                <button id="g_1v1" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">1v1.lol</button>
+                <button id="g_trc" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Tunnel Rush</button>
+                <button id="g_si" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Space Invaders</button>
+                <button id="g_2048" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Hex-2048</button>
+                <button id="g_tag" style="margin:6px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Tag</button>
             </div>
             <div id="g_area"></div>
             <button id="sg_cls" style="margin-top:18px;padding:8px 18px;font-size:1.1rem;background:#64ffda;color:#0a192f;border:none;border-radius:6px;cursor:pointer;">Close</button>
@@ -36,6 +41,11 @@ function __x1y2z3() {
     document.getElementById('g_snake').onclick = function() { _sg_load('snake'); };
     document.getElementById('g_pong').onclick = function() { _sg_load('pong'); };
     document.getElementById('g_brk').onclick = function() { _sg_load('brk'); };
+    document.getElementById('g_1v1').onclick = function() { _sg_load('1v1'); };
+    document.getElementById('g_trc').onclick = function() { _sg_load('trc'); };
+    document.getElementById('g_si').onclick = function() { _sg_load('si'); };
+    document.getElementById('g_2048').onclick = function() { _sg_load('2048'); };
+    document.getElementById('g_tag').onclick = function() { _sg_load('tag'); };
 }
 
 function _sg_load(g) {
@@ -44,6 +54,15 @@ function _sg_load(g) {
     if (g === 'snake') _sg_start(area);
     if (g === 'pong') _pg_start(area);
     if (g === 'brk') _bk_start(area);
+    if (g === '1v1') _exf(area,'https://il11liiillli11.github.io/1v1.lol/1v1.lol/');
+    if (g === 'trc') _exf(area,'https://il11liiillli11.github.io/TunnelRush22/');
+    if (g === 'si') _exf(area,'http://strykerkkd.github.io/SpaceInvaders/');
+    if (g === '2048') _exf(area,'https://jeffhou.github.io/hex-2048/');
+    if (g === 'tag') _exf(area,'https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://118473026-235917736205837253.preview.editmysite.com/uploads/b/146211889-618141766941606391/files/tag.xml&container=ig');
+}
+
+function _exf(a, u) {
+    a.innerHTML = '<iframe src="'+u+'" style="width:400px;height:400px;border:none;border-radius:10px;box-shadow:0 0 20px #64ffda;background:#222;"></iframe>';
 }
 
 function _sg_start(area) {
