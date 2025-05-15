@@ -10,16 +10,26 @@
     <script src="js/particles.js"></script>
 </head>
 <body>
-    <nav style="position: relative; z-index: 10;">
-        <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
         <ul>
-            <li><button onclick="window.location.href='index.html'" role="link" aria-label="Home" class="nav-link">Home</button></li>
-            <li><button onclick="window.location.href='projectupdates.html'" role="link" aria-label="Project Updates" class="nav-link">Project Updates</button></li>
-            <li><button onclick="window.location.href='mission.html'" role="link" aria-label="Our Mission" class="nav-link">Our Mission</button></li>
-            <li><button onclick="window.location.href='info.html'" role="link" aria-label="Info" class="nav-link">Info</button></li>
-            <li><button onclick="window.location.href='about.html'" role="link" aria-label="About Us" class="nav-link">About Us</button></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projectupdates.html">Project Updates</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
-        <button id="theme-switcher" class="nav-link theme-switcher" aria-label="Toggle Dark Mode"></button>
+    </div>
+
+    <!-- Top Bar -->
+    <nav class="top-bar">
+        <button id="sidebar-toggle" class="nav-link waffle-menu" aria-label="Open Menu">
+            <span class="waffle-bar"></span>
+            <span class="waffle-bar"></span>
+            <span class="waffle-bar"></span>
+        </button>
+        <h1 class="site-title">Synergy</h1>
+        <button id="theme-switcher" class="nav-link theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
     </nav>
 
     <div id="particles-js"></div>
