@@ -52,7 +52,7 @@ nav {
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center all nav content horizontally */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s ease;
 }
@@ -91,9 +91,11 @@ nav li {
 
 .nav-logo {
     height: 40px;
-    margin-left: 20px;
-    margin-right: 2rem;
-    vertical-align: middle;
+    margin-left: 0;
+    margin-right: 0;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
 }
 
 h1 {
@@ -259,7 +261,7 @@ body.dark-mode .feature-card-main {
   margin-right: 10px;
   cursor: pointer;
   z-index: 2000; /* Much higher than sidebar */
-  position: fixed; /* Always fixed so it's above sidebar */
+  position: absolute; /* Always fixed so it's above sidebar */
   left: 18px;
   top: 18px;
 }
@@ -292,6 +294,9 @@ body.dark-mode .feature-card-main {
 
 /* Top bar styles */
 .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   width: 100%;
@@ -299,10 +304,24 @@ body.dark-mode .feature-card-main {
   background-color: rgba(10, 25, 47, 0.9);
   z-index: 100; /* Lower than waffle menu and sidebar */
   padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar > .nav-link.waffle-menu {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+}
+
+.top-bar > .nav-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-bar > .theme-switcher {
+  position: absolute;
+  right: 18px;
+  top: 18px;
 }
 
 .site-title {
