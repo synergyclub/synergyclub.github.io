@@ -106,7 +106,8 @@ nav li {
     max-width: 48px;
     max-height: 48px;
     display: block;
-    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 12px;
     border-radius: 8px;
     background: transparent;
     box-shadow: none;
@@ -322,15 +323,36 @@ body.dark-mode .feature-card-main {
 .top-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 60px; /* Adjusted height */
+  height: 60px;
   background-color: rgba(10, 25, 47, 0.9);
-  z-index: 100; /* Lower than waffle menu and sidebar */
+  z-index: 100;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar-spacer {
+  flex: 1;
+}
+
+.top-bar > .theme-switcher {
+  position: static;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
 }
 
 .top-bar > .nav-link.waffle-menu {
@@ -342,23 +364,6 @@ body.dark-mode .feature-card-main {
 .top-bar > .nav-logo {
   margin-left: auto;
   margin-right: auto;
-}
-
-.top-bar > .theme-switcher {
-  position: absolute;
-  right: 40px; /* Place to the right of the waffle menu */
-  left: auto;
-  top: 18px;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.site-title {
-  font-size: 1.5rem;
-  color: white;
-  margin: 0;
-  text-align: center;
-  flex: 1;
 }
 
 /* Team section styles */
