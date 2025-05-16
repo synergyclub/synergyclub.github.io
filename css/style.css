@@ -91,11 +91,15 @@ nav li {
 
 .nav-logo {
     height: 40px;
-    margin-left: 0;
-    margin-right: 0;
-    transition: transform 0.3s ease;
+    width: 40px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 48px;
+    max-height: 48px;
     display: block;
-    margin: 0 auto;
+    background: transparent;
+    box-shadow: none;
+    margin-left: 32px; /* Add 32px (can adjust to 25-50px as needed) */
 }
 
 .nav-logo.nav-logo-mobile {
@@ -114,6 +118,15 @@ nav li {
 }
 
 @media (max-width: 768px) {
+    .nav-logo {
+        height: 32px;
+        width: 32px;
+        min-width: 28px;
+        min-height: 28px;
+        max-width: 36px;
+        max-height: 36px;
+        margin-left: 20px; /* Slightly less padding for mobile */
+    }
     .nav-logo.nav-logo-mobile {
         height: 32px;
         width: 32px;
