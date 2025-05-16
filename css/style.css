@@ -346,8 +346,11 @@ body.dark-mode .feature-card-main {
 
 .top-bar > .theme-switcher {
   position: absolute;
-  right: 18px;
+  right: 40px; /* Place to the right of the waffle menu */
+  left: auto;
   top: 18px;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .site-title {
