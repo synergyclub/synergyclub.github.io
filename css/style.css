@@ -320,18 +320,69 @@ body.dark-mode .feature-card-main {
 /* === END MORPH ANIMATION === */
 
 /* Top bar styles */
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background-color: rgba(10, 25, 47, 0.9);
-  z-index: 100;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+nav.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(10, 25, 47, 0.9);
+    z-index: 100;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar > .nav-link.waffle-menu {
+    position: relative;
+    left: 0;
+    margin-right: 12px;
+}
+
+.top-bar > .nav-logo {
+    margin: 0 12px 0 0;
+    height: 40px;
+    width: 40px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 48px;
+    max-height: 48px;
+    display: block;
+    background: transparent;
+    box-shadow: none;
+}
+
+.top-bar > .site-title {
+    flex: 1 1 0;
+    text-align: left;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.top-bar > .theme-switcher {
+    position: relative;
+    right: 0;
+    margin-left: 12px;
+}
+
+@media (max-width: 768px) {
+    .top-bar > .nav-logo {
+        height: 32px;
+        width: 32px;
+        min-width: 28px;
+        min-height: 28px;
+        max-width: 36px;
+        max-height: 36px;
+        margin: 0 8px 0 0;
+    }
+    .top-bar > .site-title {
+        font-size: 1.1rem;
+    }
 }
 
 .top-bar-spacer {
