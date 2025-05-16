@@ -347,12 +347,12 @@ body.dark-mode .feature-card-main {
 .site-title {
   font-size: 1.5rem;
   color: white;
-  font-weight: bold;
   margin: 0;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  letter-spacing: 1px;
+  text-align: center;
+  flex: 1;
+  font-weight: 400;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  letter-spacing: 0.04em;
 }
 
 .top-bar > .nav-link.waffle-menu {
