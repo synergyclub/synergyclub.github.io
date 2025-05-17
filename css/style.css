@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Fira Sans Extra Condensed';
-    src: url('../assets/fonts/FiraSansExtraCondensed.ttf') format('truetype');
+    font-family: 'Orbitron';
+    src: url('../assets/fonts/orbiton/Orbitron-ExtraBold.ttf') format('truetype');
 }
 
 body {
     margin: 0;
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     padding: 0;
     min-height: 100vh;
     position: relative;
@@ -71,22 +71,6 @@ nav ul {
 nav li {
     margin: 0;
     transition: transform 0.3s ease;
-}
-
-.nav-link {
-    background: none;
-    border: none;
-    color: white;
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
-    font-size: 1.1rem;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #64ffda; /* Highlight color on hover */
-    transform: translateY(-5px); /* Slight lift effect */
 }
 
 .nav-logo {
@@ -210,6 +194,11 @@ body.dark-mode .feature-card-main {
     margin-right: 10px; /* Adjust this value to move the button left */
     position: relative;
     left: -10px; /* Moves the button slightly left */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .cookie-banner {
@@ -248,7 +237,7 @@ body.dark-mode .feature-card-main {
 /* Sidebar styles */
 .sidebar {
   position: fixed;
-  top: 60px; /* Adjusted to appear below the top bar */
+  top: 52px; /* Adjusted to appear below the top bar */
   left: -250px; /* Hidden by default */
   width: 250px;
   height: calc(100% - 60px); /* Adjust height to exclude the top bar */
@@ -300,10 +289,8 @@ body.dark-mode .feature-card-main {
   padding: 0;
   margin-right: 10px;
   cursor: pointer;
-  z-index: 2000; /* Much higher than sidebar */
-  position: absolute; /* Always fixed so it's above sidebar */
   left: 18px;
-  top: 18px;
+  top: 2px;
 }
 
 .waffle-bar {
@@ -340,14 +327,14 @@ nav.top-bar {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
+    height: 20px;
     background-color: rgba(10, 25, 47, 0.9);
     z-index: 100;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.top-bar > .nav-link.waffle-menu {
+.top-bar > .waffle-menu {
     position: relative;
     left: 0;
     margin-right: 12px;
@@ -373,13 +360,15 @@ nav.top-bar {
     color: white;
     font-weight: 400;
     margin: 0;
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     letter-spacing: 0.5px;
 }
 
 .top-bar > .theme-switcher {
     position: relative;
-    right: 0;
+    right: 5;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
     margin-left: 12px;
 }
 
@@ -400,12 +389,6 @@ nav.top-bar {
 
 .top-bar-spacer {
   flex: 1;
-}
-
-.top-bar > .theme-switcher {
-  position: static;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .site-title {
@@ -715,11 +698,13 @@ nav.top-bar {
     margin-bottom: 0.3rem;
     text-align: left;
     padding-left: 0.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.95rem;
-    padding: 0.2rem 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
   }
 
   /* Sidebar adjustments for mobile */
@@ -754,6 +739,13 @@ nav.top-bar {
     position: fixed;
     left: 18px;
     top: 18px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
   }
 
   /* Content adjustments for mobile */
