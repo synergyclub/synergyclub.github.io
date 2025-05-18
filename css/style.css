@@ -13,6 +13,8 @@ body {
     font-family: 'Fira-sans', sans-serif;
     padding: 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow-x: hidden;
     background-color: #0a192f; /* Dark background for the page */
@@ -40,6 +42,7 @@ canvas.particles-js-canvas-el {
 }
 
 .content {
+    flex: 1; /* Allow content to grow */
     position: relative;
     z-index: 3;
     color: white;
@@ -135,7 +138,9 @@ h1 {
 }
 
 .main-content {
-    margin-top: 80px;
+    margin-top: 180px; /* Increased from 150px */
+    padding-top: 4rem; /* Increased from 3rem */
+    min-height: calc(100vh - 200px); /* Ensure content fills space */
 }
 
 .features {
@@ -162,7 +167,7 @@ h1 {
 
 .content-container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 150px auto 50px; /* Increased top margin */
     padding: 20px;
 }
 
@@ -334,12 +339,12 @@ nav.top-bar {
     top: 0;
     width: 100%;
     height: 30px;
-    background-color: rgba(100, 255, 218, 0.1); /* Bright teal with transparency */
+    background-color: rgba(10, 25, 47, 0.95); /* Darker background */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: 100;
     padding: 1rem;
-    box-shadow: 0 2px 15px rgba(100, 255, 218, 0.15);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
 .top-bar > .waffle-menu {
@@ -698,7 +703,7 @@ nav.top-bar {
     cursor: none !important;
 }
 
-a, button, .feature-card, .team-card, input[type="button"], input[type="submit"] {
+a, button, .feature-card, .team-card, .site-title,input[type="button"], input[type="submit"] {
     cursor: none !important;
 }
 
@@ -970,17 +975,85 @@ a, button, .feature-card, .team-card, input[type="button"], input[type="submit"]
     transform-origin: center;
 }
 
+/* Update top bar styles */
+nav.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(10, 25, 47, 0.95); /* Darker background */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100;
+    padding: 1rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Update footer styles */
 .site-footer {
-    background-color: rgba(100, 255, 218, 0.1); /* Bright teal with transparency */
+    background-color: rgba(10, 25, 47, 0.95); /* Darker background */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: 2rem 0;
-    margin-top: 4rem;
     text-align: center;
     position: relative;
     z-index: 10;
-    box-shadow: 0 -2px 15px rgba(100, 255, 218, 0.15);
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    margin-top: auto; /* Push footer to bottom */
+    width: 100%;
+}
+
+/* Fix footer positioning */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #0a192f;
+    cursor: none !important;
+}
+
+.content {
+    flex: 1; /* Allow content to grow */
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Remove extra footer elements */
+footer[data-version] {
+    display: none;
+}
+
+/* Dark mode adjustments */
+body.dark-mode nav.top-bar {
+    background-color: rgba(0, 76, 229, 0.95);
+}
+
+body.dark-mode .site-footer {
+    background-color: rgba(0, 76, 229, 0.95);
+}
+
+/* Update text particle styles */
+.text-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    font-size: 24px;
+    color: #ffd700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    opacity: 0;
+    user-select: none;
+    will-change: transform;
 }
 
 .footer-content {
@@ -1052,15 +1125,58 @@ a, button, .feature-card, .team-card, input[type="button"], input[type="submit"]
   }
 }
 
-/* Update text particle styles */
-.text-particle {
-    position: fixed;
-    pointer-events: none;
-    z-index: 99999;
-    font-size: 24px;
-    color: #ffd700;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
-    opacity: 0;
-    user-select: none;
-    will-change: transform;
+/* Add rainbow text animation */
+@keyframes rainbow-text {
+    0% { color: #ff0000; }
+    15% { color: #ff8800; }
+    30% { color: #ffff00; }
+    45% { color: #64ffda; }
+    60% { color: #0099ff; }
+    75% { color: #6633ff; }
+    90% { color: #ff00ff; }
+    100% { color: #ff0000; }
+}
+
+.rainbow-title {
+    animation: rainbow-text 6s linear infinite;
+    background: linear-gradient(to right, #ff0000, #ff8800, #ffff00, #64ffda, #0099ff, #6633ff, #ff00ff, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: rainbow-flow 6s linear infinite;
+}
+
+@keyframes rainbow-flow {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Update main content and title spacing */
+.main-content {
+    margin-top: 180px; /* Increased from 150px */
+    padding-top: 4rem; /* Increased from 3rem */
+    min-height: calc(100vh - 200px);
+}
+
+h1.rainbow-title {
+    margin-top: 40px; /* Add specific margin for the title */
+    padding-top: 20px;
+}
+
+/* Adjust responsive spacing */
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 150px;
+        padding-top: 3rem;
+    }
+    
+    h1.rainbow-title {
+        margin-top: 30px;
+        padding-top: 15px;
+    }
 }
