@@ -80,16 +80,16 @@ nav li {
 }
 
 .nav-logo {
-    height: 40px;
-    width: 40px;
-    min-width: 32px;
-    min-height: 32px;
-    max-width: 48px;
-    max-height: 48px;
+    height: 60px;
+    width: 60px;
+    min-width: 52px;
+    min-height: 52px;
+    max-width: 68px;
+    max-height: 68px;
     display: block;
     background: transparent;
     box-shadow: none;
-    margin-left: 32px; /* Add 32px (can adjust to 25-50px as needed) */
+    margin-left: 42px; /* Add 42px (can adjust to 25-50px as needed) */
 }
 
 .nav-logo.nav-logo-mobile {
@@ -349,22 +349,18 @@ nav.top-bar {
 }
 
 .top-bar > .nav-logo {
-    margin: 0 12px 0 0;
-    height: 40px;
-    width: 40px;
-    min-width: 32px;
-    min-height: 32px;
-    max-width: 48px;
-    max-height: 48px;
-    display: block;
-    background: transparent;
-    box-shadow: none;
+    margin: 0; /* Remove margin */
+}
+
+.top-bar > .site-title {
+    margin-left: -8px; /* Negative margin to move closer to logo */
+    padding-left: 0;
 }
 
 .top-bar > .site-title {
     flex: 1 1 0;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     color: white;
     font-weight: 400;
     margin: 0;
@@ -406,6 +402,21 @@ nav.top-bar {
   font-weight: 400;
   font-family: 'Orbiton', sans-serif;
   letter-spacing: 0.04em;
+}
+
+/* Add site title hover effects */
+.site-title {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+.site-title:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
 }
 
 .top-bar > .nav-link.waffle-menu {
@@ -949,26 +960,14 @@ a, button, .feature-card, .team-card, input[type="button"], input[type="submit"]
   }
 }
 
-.main-content h1 {
-      margin-top: 20px; /* Adjusted to raise the title */
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      background-size: 300% auto; /* Increased for smoother transitions */
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      animation: rainbow 8s ease-in-out infinite; /* Smooth transition with ease-in-out */
-    }
+/* Update logo and title styles */
+.nav-logo, .site-title {
+    cursor: pointer !important;
+    transition: all 0.3s ease;
+}
 
-@keyframes rainbow {
-  0% {
-    background-position: 0% center;
-  }
-  50% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
+.nav-logo {
+    transform-origin: center;
 }
 
 /* Update footer styles */
@@ -1051,4 +1050,17 @@ a, button, .feature-card, .team-card, input[type="button"], input[type="submit"]
   .footer-copyright span[data-version] {
     font-size: 0.8rem;
   }
+}
+
+/* Update text particle styles */
+.text-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    font-size: 24px;
+    color: #ffd700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    opacity: 0;
+    user-select: none;
+    will-change: transform;
 }
