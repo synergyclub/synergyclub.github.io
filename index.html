@@ -171,5 +171,31 @@
   <!-- Keep existing scripts -->
   <script src="js/main.js" defer></script>
   <script src="js/version.js"></script>
+  <script type="module">
+
+
+  //ATTEMPTING TO ADD FIREBASE TO BYPASS SCHOOL BLOCK(DO NOT DELETE)  
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBuveJjNLBx28uR6sNyBfAapQfURWNFVN4",
+    authDomain: "synergy-website-1.firebaseapp.com",
+    projectId: "synergy-website-1",
+    storageBucket: "synergy-website-1.firebasestorage.app",
+    messagingSenderId: "182167336339",
+    appId: "1:182167336339:web:a603115a839c2e37302466",
+    measurementId: "G-DJF3V9R133"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
