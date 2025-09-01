@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Orbiton';
-    src: url('../assets/fonts/orbiton/Orbitron-ExtraBold.ttf') format('truetype');
+  src: url('../assets/fonts/orbiton/Orbitron-ExtraBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Fira-sans';
-    src: url('../assets/fonts/FiraSans-ExtraCondensed.ttf') format('truetype');
+  src: url('../assets/fonts/Fira Sans Extra Condensed.ttf') format('truetype');
 }
 
 body {
