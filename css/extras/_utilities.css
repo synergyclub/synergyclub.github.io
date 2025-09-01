@@ -2,13 +2,13 @@
    Font Declarations
    ========================== */
 @font-face {
-  font-family: 'Orbiton';
-  src: url('../assets/fonts/orbiton/Orbitron-ExtraBold.ttf') format('truetype');
+  font-family: 'Fira-sans';
+  src: url('../../assets/fonts/Fira Sans Extra Condensed.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Fira-sans';
-  src: url('../assets/fonts/Fira Sans Extra Condensed.ttf') format('truetype');
+  font-family: 'Orbiton';
+  src: url('../../assets/fonts/orbiton/Orbitron-ExtraBold.ttf') format('truetype');
 }
 
 /* ==========================

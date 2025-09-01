@@ -43,7 +43,7 @@
 
 /* Left-aligned items */
 .timeline-item.left {
-  left: 0;
+  left: 15%;
   padding-right: 40px;
   transform: translateX(-100px);
   backdrop-filter: blur(10px);
@@ -94,11 +94,11 @@
 }
 
 .timeline-item.left .timeline-content::before {
-  right: -9px;
+  right: -12px;
 }
 
 .timeline-item.right .timeline-content::before {
-  left: -9px;
+  left: -12px;
 }
 
 /* Remove connecting lines */

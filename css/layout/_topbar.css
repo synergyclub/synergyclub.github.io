@@ -8,8 +8,8 @@ nav.top-bar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 60px;
-  padding: 0 1rem;
+  height: 70px; /* Increased height for larger logo */
+  padding: 0 1.5rem;
   background-color: rgba(10, 25, 47, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -20,16 +20,56 @@ nav.top-bar {
 .top-bar-left {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
+/* ==========================
+   Logo & Title Group
+   ========================== */
 .logo-title-group {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem; /* Reduced from 0.5rem */
   position: relative;
 }
 
+.nav-logo {
+  height: 64px; /* Increased for visual impact */
+  width: 64px;
+  cursor: pointer;
+  transform-origin: center;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* ==========================
+   Title with Orbiton Font
+   ========================== */
+.site-title {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 800; /* ExtraBold */
+  font-family: 'Orbiton', sans-serif;
+  color: white;
+  letter-spacing: 0.6px;
+  margin: 0;
+  white-space: nowrap;
+  padding-right: 0.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  line-height: 1;
+}
+
+.site-title:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+/* ==========================
+   Title Particle Wrapper
+   ========================== */
 .title-particle-wrapper {
   position: relative;
   display: inline-block;
@@ -45,41 +85,10 @@ nav.top-bar {
 }
 
 /* ==========================
-   Logo & Title
-   ========================== */
-.nav-logo {
-  height: 32px;
-  cursor: pointer;
-  transform-origin: center;
-  transition: all 0.3s ease;
-}
-
-.site-title {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: 400;
-  font-family: 'Orbiton', sans-serif;
-  color: white;
-  letter-spacing: 0.5px;
-  margin: 0;
-  white-space: nowrap;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.site-title:hover {
-  color: #ffd700;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-}
-
-/* ==========================
    Theme Switcher
    ========================== */
 .theme-switcher {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   background: none;
   border: none;
   color: white;
@@ -91,15 +100,22 @@ nav.top-bar {
    Responsive
    ========================== */
 @media (max-width: 768px) {
+  nav.top-bar {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem 1rem;
+  }
+
   .nav-logo {
-    height: 28px;
-    width: 28px;
-    margin-left: 20px;
+    height: 36px;
+    margin-left: 0;
   }
 
   .site-title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     padding-left: 0.5rem;
+    text-align: left;
   }
 
   .nav-logo.nav-logo-mobile {
