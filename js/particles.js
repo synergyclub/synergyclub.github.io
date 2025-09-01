@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
     try {
         tsParticles.load("particles-js", {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
+                number: { value: 30, density: { enable: true, value_area: 800 } },
                 color: { value: "#64ffda" },
                 shape: { type: "circle" },
                 opacity: { value: 0.8 },

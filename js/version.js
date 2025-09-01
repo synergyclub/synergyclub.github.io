@@ -1,4 +1,4 @@
-const SYNERGY_VERSION = "v"+"1.3.7";
+const SYNERGY_VERSION = "v"+"1.3.8";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Target all spans with data-version attribute

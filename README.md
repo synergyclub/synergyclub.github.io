@@ -30,19 +30,15 @@ To test the project locally, you will need node.js installed on your machine.
    cd synergy.github.io
    ```
 
-3. Install the required dependencies:
+3. Start the development server:
+
+   make sure you are in the root directory for the project
 
    ```bash
-   npm install
+   node index.js
    ```
 
-4. Start the development server:
-
-   ```bash
-   npm start
-   ```
-
-5. Open your browser and go to `http://localhost:3000` to see the project in action.
+4. Open your browser and go to `http://localhost:3000` to see the project in action.
 
 ## Installation (for development purposes)
 

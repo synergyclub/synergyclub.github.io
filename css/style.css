@@ -18,7 +18,6 @@ body {
     position: relative;
     overflow-x: hidden;
     background-color: #0a192f; /* Dark background for the page */
-    cursor: none !important; /* Hide the default cursor */
 }
 
 #particles-js {
@@ -698,47 +697,6 @@ nav.top-bar {
   background-color: #52e0c4;
 }
 
-/* Update cursor styles */
-* {
-    cursor: none !important;
-}
-
-a, button, .feature-card, .team-card, .site-title,input[type="button"], input[type="submit"] {
-    cursor: none !important;
-}
-
-.cursor-dot {
-    width: 20px;
-    height: 32px;
-    background-color: #00ffbb;
-    position: fixed;
-    pointer-events: none;
-    z-index: 99999;
-    transition: all 0.15s ease;
-    transform: translate(-50%, -50%);
-    clip-path: polygon(50% 0%, 0% 100%, 50% 70%, 100% 100%);
-    filter: drop-shadow(0 0 10px rgba(0, 255, 187, 0.9));
-    mix-blend-mode: normal;
-    opacity: 1;
-    will-change: transform;
-}
-
-.cursor-outline {
-    width: 50px;
-    height: 50px;
-    border: 3px solid #00ffbb;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 99998;
-    transition: all 0.2s ease;
-    transform: translate(-50%, -50%);
-    opacity: 0.8;
-    mix-blend-mode: normal;
-    box-shadow: 0 0 15px rgba(0, 255, 187, 0.4);
-    will-change: transform;
-}
-
 /* Update lightning zap styles */
 .lightning-zap {
     position: fixed;
@@ -1015,7 +973,6 @@ body {
     position: relative;
     overflow-x: hidden;
     background-color: #0a192f;
-    cursor: none !important;
 }
 
 .content {
