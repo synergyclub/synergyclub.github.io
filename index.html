@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Synergy - Home</title>
   <link rel="icon" type="image/x-icon" href="assets/images/synergy-favicon-color.png" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="../js/titleEffects.js"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="forced-white-links">
-
+  <div id="particles-js"></div>`
   <!-- Sidebar -->
   <div id="sidebar" class="sidebar">
     <ul>
-      <li><a href="/html/index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="/html/projectupdates.html">Project Updates</a></li>
       <li><a href="/html/mission.html">Our Mission</a></li>
       <li><a href="/html/info.html">Info</a></li>
@@ -28,10 +30,19 @@
       <span class="waffle-bar"></span>
       <span class="waffle-bar"></span>
     </button>
-    <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
-    <span class="site-title">Synergy</span>
+
+    <div class="logo-title-group" style="display: flex; align-items: center; gap: 0.5rem; position: relative;">
+      <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" style="height: 32px;" />
+
+      <div class="title-particle-wrapper" style="position: relative; display: inline-block;">
+        <div id="title-particles" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+        <span class="site-title" id="synergy-title" style="position: relative; z-index: 2;">Synergy</span>
+      </div>
+    </div>
+
     <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
   </nav>
+
 
   <div class="content main-content" style="position: relative; z-index: 2; max-width: 700px; margin: 90px auto 0 auto; background: rgba(255,255,255,0.04); border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 2rem 2rem 2rem;">
     <h1 style="color:#64ffda; font-size:2.2rem; margin-bottom:0.5em; text-align:center;">Welcome to Synergy</h1>

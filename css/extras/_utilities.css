@@ -1,0 +1,50 @@
+/* ==========================
+   Font Declarations
+   ========================== */
+@font-face {
+  font-family: 'Orbiton';
+  src: url('../assets/fonts/orbiton/Orbitron-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira-sans';
+  src: url('../assets/fonts/Fira Sans Extra Condensed.ttf') format('truetype');
+}
+
+/* ==========================
+   Particle Canvas Setup
+   ========================== */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1; /* Keeps particles behind interactive elements */
+}
+
+canvas.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================
+   Text Particle Effects
+   ========================== */
+.text-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  font-size: 24px;
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+  opacity: 0;
+  user-select: none;
+  will-change: transform;
+}

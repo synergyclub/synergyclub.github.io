@@ -1,0 +1,84 @@
+/* ==========================
+   Keyframes: Text & Background
+   ========================== */
+@keyframes rainbow-text {
+  0%   { color: #ff0000; }
+  15%  { color: #ff8800; }
+  30%  { color: #ffff00; }
+  45%  { color: #64ffda; }
+  60%  { color: #0099ff; }
+  75%  { color: #6633ff; }
+  90%  { color: #ff00ff; }
+  100% { color: #ff0000; }
+}
+
+@keyframes rainbow-flow {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ==========================
+   Keyframes: Motion & Reveal
+   ========================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(var(--direction));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==========================
+   Keyframes: Zap Effect
+   ========================== */
+@keyframes zapAnimation {
+  0% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: brightness(2) drop-shadow(0 0 8px #ffeb3b);
+  }
+  100% {
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: brightness(1) drop-shadow(0 0 4px #ffd700);
+  }
+}
+
+/* ==========================
+   Section Entry Transitions
+   ========================== */
+.features,
+.team-section,
+.timeline-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* ==========================
+   Rainbow Title Styling
+   ========================== */
+.rainbow-title {
+  animation: rainbow-text 6s linear infinite;
+  background: linear-gradient(to right, #ff0000, #ff8800, #ffff00, #64ffda, #0099ff, #6633ff, #ff00ff, #ff0000);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-flow 6s linear infinite;
+}

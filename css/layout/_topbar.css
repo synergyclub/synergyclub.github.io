@@ -1,0 +1,111 @@
+/* ==========================
+   Top Bar Layout
+   ========================== */
+nav.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 1rem;
+  background-color: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.title-particle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#title-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ==========================
+   Logo & Title
+   ========================== */
+.nav-logo {
+  height: 32px;
+  cursor: pointer;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.site-title {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Orbiton', sans-serif;
+  color: white;
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.site-title:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+/* ==========================
+   Theme Switcher
+   ========================== */
+.theme-switcher {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* ==========================
+   Responsive
+   ========================== */
+@media (max-width: 768px) {
+  .nav-logo {
+    height: 28px;
+    width: 28px;
+    margin-left: 20px;
+  }
+
+  .site-title {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+  }
+
+  .nav-logo.nav-logo-mobile {
+    height: 32px;
+    width: 32px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,27 @@
+/* ==========================
+   Dark Mode Overrides
+   ========================== */
+body.dark-mode {
+  background-color: #0004d3;
+  color: #ffffff;
+}
+
+body.dark-mode nav,
+body.dark-mode nav.top-bar {
+  background-color: rgba(0, 76, 229, 0.95);
+}
+
+body.dark-mode .content {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+body.dark-mode .feature-card,
+body.dark-mode .feature-card-main {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+body.dark-mode .site-footer {
+    background-color: rgba(0, 76, 229, 0.95);
+}
