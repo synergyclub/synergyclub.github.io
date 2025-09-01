@@ -1,0 +1,24 @@
+{
+  "name": "synergyclub.github.io",
+  "version": "1.4.0",
+  "description": "website for synergyclub",
+  "keywords": [
+    "website",
+    "energy"
+  ],
+  "homepage": "https://github.com/synergyclub/synergyclub.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/synergyclub/synergyclub.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synergyclub/synergyclub.github.io.git"
+  },
+  "license": "ISC",
+  "author": "synergyclub",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  }
+}

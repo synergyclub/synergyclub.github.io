@@ -16,7 +16,7 @@ To empower students to design, build, and implement energy-efficient and cost-ef
 
 ## How to run (test run)
 
-To test the project locally, you will need node.js installed on your machine.
+To test the project locally, you will need node.js and npm installed on your machine.
 
 1. Clone the repository:
 
