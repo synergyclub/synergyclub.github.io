@@ -1,0 +1,118 @@
+/* ==========================
+   Timeline Section Layout
+   ========================== */
+.timeline-section {
+  margin: 100px auto;
+  padding: 20px;
+  max-width: 1200px;
+  position: relative;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, transparent, #64ffda 10%, #64ffda 90%, transparent);
+  z-index: 1;
+}
+
+/* ==========================
+   Timeline Items
+   ========================== */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin: 40px 0;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.timeline-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Left-aligned items */
+.timeline-item.left {
+  left: 15%;
+  padding-right: 40px;
+  transform: translateX(-100px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Right-aligned items */
+.timeline-item.right {
+  left: 50%;
+  padding-left: 0;
+  transform: translateX(100px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.timeline-item.right.active {
+  transform: translateX(0);
+}
+
+/* ==========================
+   Timeline Content Cards
+   ========================== */
+.timeline-content {
+  position: relative;
+  padding: 25px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* ==========================
+   Timeline Dots
+   ========================== */
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: #64ffda;
+  border-radius: 50%;
+  border: 3px solid #0a192f;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.timeline-item.left .timeline-content::before {
+  right: -12px;
+}
+
+.timeline-item.right .timeline-content::before {
+  left: -12px;
+}
+
+/* Remove connecting lines */
+.timeline-content::after {
+  display: none !important;
+}
+
+/* ==========================
+   Staggered Animation Delays
+   ========================== */
+.timeline-item:nth-child(1).active { transition-delay: 0.1s; }
+.timeline-item:nth-child(2).active { transition-delay: 0.3s; }
+.timeline-item:nth-child(3).active { transition-delay: 0.5s; }
+
+.timeline-item:nth-child(1).animate { transition-delay: 0.2s; }
+.timeline-item:nth-child(2).animate { transition-delay: 0.4s; }
+.timeline-item:nth-child(3).animate { transition-delay: 0.6s; }

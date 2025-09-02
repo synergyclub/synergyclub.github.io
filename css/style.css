@@ -1,0 +1,23 @@
+/* ============================================
+   SYNERGY DESIGN SYSTEM
+   Master Stylesheet — Imports All Modules
+   ============================================ */
+
+/* ---------- Layout Components ---------- */
+@import url('./layout/_content.css');            /* Main content containers */
+@import url('./layout/_footer.css');             /* Footer layout and links */
+@import url('./layout/_responsive.css');         /* Mobile and tablet adjustments */
+@import url('./layout/_sidebar.css');            /* Sidebar and waffle menu */
+@import url('./layout/_topbar.css');             /* Navigation bar, logo, title */
+
+/* ---------- UI Components ---------- */
+@import url('./components/_buttons.css');        /* Scroll-to-top, toggles */
+@import url('./components/_features.css');       /* Feature cards and layout */
+@import url('./components/_notifications.css');  /* Banners and alerts */
+@import url('./components/_team.css');           /* Team section and cards */
+@import url('./components/_timeline.css');       /* Timeline layout and dots */
+
+/* ------------- Extras ------------- */
+@import url('./extras/_darkmode.css');           /* Dark mode overrides */
+@import url('./extras/_animations.css');         /* Keyframes and transitions */
+@import url('./extras/_utilities.css');         /* Utilities, fonts, particles */

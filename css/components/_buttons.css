@@ -1,0 +1,88 @@
+/* ==========================
+   Scroll to Top Button
+   ========================== */
+#to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #64ffda;
+  color: #0a192f;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#to-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#to-top-btn.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+#to-top-btn:hover {
+  transform: scale(1.1);
+  background-color: #52e0c4;
+}
+
+/* ==========================
+   Theme Switcher Button
+   ========================== */
+.theme-switcher {
+  position: relative;
+  left: -10px;
+  margin-right: 10px;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ==========================
+   Cookie Consent Button
+   ========================== */
+.cookie-button {
+  background-color: #1f73d4;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cookie-button:hover {
+  background-color: #1f31d4;
+  transform: translateY(-2px);
+}
+
+/* ==========================
+   Lightning Zap Animation
+   ========================== */
+.lightning-zap {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99997;
+  width: 2px;
+  opacity: 0;
+  background: linear-gradient(to right, #ffeb3b, #ffd700);
+  box-shadow: 0 0 8px rgba(255, 235, 59, 0.6);
+  transform-origin: 0 0;
+  animation: zapAnimation 0.4s ease-out forwards;
+}
