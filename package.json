@@ -14,15 +14,11 @@
     "type": "git",
     "url": "git+https://github.com/synergyclub/synergyclub.github.io.git"
   },
-  "license": "ISC",
+  "license": "Synergy License",
   "author": "synergyclub",
   "type": "commonjs",
   "main": "index.html",
   "scripts": {
-    "test": "cd test && node index.js",
-    "deploy": "node deploy.js"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "test": "cd test && node index.js"
   }
 }
