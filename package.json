@@ -19,6 +19,7 @@
   "type": "commonjs",
   "main": "index.html",
   "scripts": {
+    "merge": "cp -r test/. public/ && cd public && rm index.js",
     "test": "cd test && node index.js"
   }
 }
