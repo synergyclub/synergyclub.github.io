@@ -35,7 +35,8 @@ To test the project locally, you will need node.js and npm installed on your mac
    make sure you are in the root directory for the project
 
    ```bash
-   node index.js
+   npm install
+   npm run test
    ```
 
 4. Open your browser and go to `http://localhost:3000` to see the project in action.
