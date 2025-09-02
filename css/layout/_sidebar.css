@@ -3,14 +3,14 @@
    ========================== */
 .sidebar {
   position: fixed;
-  top: 59.45px;
+  top: 70.45px;
   left: -250px;
   width: 250px;
-  height: calc(100% - 59.45px);
+  height: calc(100% - 71px);
   background-color: #0a192f;
   color: white;
   z-index: 1000;
-  transition: left 0.3s ease;
+  transition: left 0.3s cubic-bezier(0.62, 0.02, 0.37, 0.98);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
 }

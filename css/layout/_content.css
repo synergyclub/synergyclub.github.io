@@ -2,32 +2,33 @@
    Global Content Container
    ========================== */
 .content {
-  flex: 1;
-  position: relative;
-  z-index: 3;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  max-width: 2400px;
-  margin: 0 auto;
+   flex: 1;
+   position: relative;
+   z-index: 3;
+   color: white;
+   text-align: center;
+   padding: 2rem;
+   max-width: 2400px;
+   margin: 0 auto;
+   
 }
 
 /* ==========================
    Main Content Section
    ========================== */
 .main-content {
-  margin-top: 180px;
-  padding-top: 4rem;
-  min-height: calc(100vh - 200px);
+   margin-top: 180px;
+   padding-top: 4rem;
+   min-height: calc(100vh - 200px);
 }
 
 /* ==========================
    Inner Content Container
    ========================== */
 .content-container {
-  max-width: 1600px;
-  margin: 150px auto 50px;
-  padding: 20px;
+   max-width: 1600px;
+   margin: 150px auto 50px;
+   padding: 20px;
 }
 
 /* ==========================
@@ -59,12 +60,14 @@ body {
    Body Styles
    ========================== */
 h1.rainbow-title {
-    margin-top: 40px; /* Add specific margin for the title */
-    padding-top: 20px;
+   margin-top: 40px; /* Add specific margin for the title */
+   padding-top: 20px;
+   font-size: 4rem;
+   user-select:none;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #64ffda; /* Highlight color */
+   font-size: 3rem;
+   margin-bottom: 1rem;
+   color: #64ffda; /* Highlight color */
 }
