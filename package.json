@@ -20,7 +20,7 @@
   "main": "index.html",
   "scripts": {
     "test": "cd test && node index.js",
-    "deploy": "gh-pages -d public --repo https://github.com/synergyclub/synergyclub.github.io.git"
+    "deploy": "node deploy.js"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
