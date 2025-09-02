@@ -3,10 +3,10 @@
    ========================== */
 .sidebar {
   position: fixed;
-  top: 62px;
+  top: 59.45px;
   left: -250px;
   width: 250px;
-  height: calc(100% - 42px);
+  height: calc(100% - 59.45px);
   background-color: #0a192f;
   color: white;
   z-index: 1000;

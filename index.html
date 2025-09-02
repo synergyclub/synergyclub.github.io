@@ -25,23 +25,34 @@
 
   <!-- Top Bar -->
   <nav class="top-bar">
-    <button id="sidebar-toggle" class="waffle-menu" aria-label="Open Menu">
-      <span class="waffle-bar"></span>
-      <span class="waffle-bar"></span>
-      <span class="waffle-bar"></span>
-    </button>
+    <div class="top-bar-inner">
+      <!-- Left: Waffle Menu -->
+      <div class="top-bar-left">
+        <button id="sidebar-toggle" class="waffle-menu" aria-label="Open Menu">
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+        </button>
+      </div>
 
-    <div class="logo-title-group" style="display: flex; align-items: center; gap: 0.5rem; position: relative;">
-      <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo"/>
+      <!-- Center: Logo + Title -->
+      <div class="top-bar-center">
+        <div class="logo-title-group">
+          <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
+          <div class="title-particle-wrapper">
+            <div id="title-particles"></div>
+            <span class="site-title" id="synergy-title">Synergy</span>
+          </div>
+        </div>
+      </div>
 
-      <div class="title-particle-wrapper">
-        <div id="title-particles"></div>
-        <span class="site-title" id="synergy-title">Synergy</span>
+      <!-- Right: Theme Switcher -->
+      <div class="top-bar-right">
+        <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌓</button>
       </div>
     </div>
-
-    <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
   </nav>
+
 
 
   <div class="content main-content" style="position: relative; z-index: 2; max-width: 700px; margin: 90px auto 0 auto; background: rgba(255,255,255,0.04); border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 2rem 2rem 2rem;">

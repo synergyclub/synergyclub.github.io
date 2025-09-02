@@ -8,7 +8,7 @@
   color: white;
   text-align: center;
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 2400px;
   margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@
    Inner Content Container
    ========================== */
 .content-container {
-  max-width: 800px;
+  max-width: 1600px;
   margin: 150px auto 50px;
   padding: 20px;
 }
