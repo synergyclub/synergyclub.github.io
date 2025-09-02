@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synergy - Home</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/synergy-favicon-color.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/titleEffects.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projectupdates.html">Project Updates</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="donations.html">Donations</a></li>
+    </ul>
+  </div>
+
+  <!-- Top Bar -->
+  <nav class="top-bar">
+    <div class="top-bar-inner">
+      <!-- Left: Waffle Menu -->
+      <div class="top-bar-left">
+        <button id="sidebar-toggle" class="waffle-menu" aria-label="Open Menu">
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+        </button>
+      </div>
+
+      <!-- Center: Logo + Title -->
+      <div class="top-bar-center">
+        <div class="logo-title-group">
+          <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
+          <div class="title-particle-wrapper">
+            <div id="title-particles"></div>
+            <span class="site-title" id="synergy-title">Synergy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Theme Switcher -->
+      <div class="top-bar-right">
+        <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+    <div id="particles-js"></div>
+    <div class="content main-content" style="position: relative; z-index: 2; max-width: 700px; margin: 90px auto 0 auto; background: rgba(255,255,255,0.04); border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 2rem 2rem 2rem;">
+        <h1 style="color:#64ffda; font-size:2.2rem; margin-bottom:0.5em; text-align:center;">Project Updates</h1>
+        <p style="text-align:center; color:#ccc; font-size:1.15rem; max-width: 500px; margin: 0 auto 2rem auto;">Stay up to date with our latest developments and progress.</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <!-- Buy me a Coffee -->
+            <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">
+                <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me a Coffee" />
+            </a>
+            <!-- GitHub Badge -->
+            <a href="https://github.com/synergyclub" target="_blank">
+                <img src="https://img.shields.io/badge/GitHub-follow-blue?style=for-the-badge&logo=github" alt="GitHub" />
+            </a>
+            <!-- Venmo Badge -->
+            <a href="https://venmo.com/" target="_blank">
+                <img src="https://img.shields.io/badge/Venmo-donate-blue?style=for-the-badge&logo=venmo" alt="Venmo" />
+            </a>
+            <!-- CashApp Badge -->
+            <a href="https://cash.app/$shmssynergy" target="_blank">
+                <img src="https://img.shields.io/badge/CashApp-donate-green?style=for-the-badge&logo=cashapp" alt="CashApp" />
+            </a>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Challenges</h3>
+                <p>The main issue with Synergy 1 and Synergy 2 is that they weigh quite a lot, both of them have car batteries in them and weigh around 30 pounds each so they are quite heavy. The way we are overcoming this challenge is with Synergy 3. Synergy 3 is going to have the components of a car battery inside so it will not have such issues.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Where did the PUC idea come from?</h3>
+                <p>We picked the PUC idea because the other two Synergys are too big and heavy, which makes them next to impossible to lug around, especially when a stairwell has to get involved. So, in order to make it easier we created the PUC idea.</p>
+            </div>
+        </div>
+    </div>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+        <button id="accept-cookies" class="cookie-button">Accept</button>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="https://github.com/synergyclub" target="_blank">GitHub</a>
+          <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">Support Us</a>
+          <a href="mission.html">Our Mission</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2023-2025 Synergy Club. All rights reserved.</p>
+          <p>Built with 💚 by <a href="https://github.com/synergyclub" class="footer-github-link" target="_blank">Synergy Team</a></p>
+          <p><span data-version></span></p>
+        </div>
+      </div>
+    </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/version.js"></script>
+</body>
+</html>

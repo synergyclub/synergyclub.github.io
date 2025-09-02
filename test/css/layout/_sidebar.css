@@ -1,0 +1,86 @@
+/* ==========================
+   Sidebar Layout
+   ========================== */
+.sidebar {
+  position: fixed;
+  top: 70.45px;
+  left: -250px;
+  width: 250px;
+  height: calc(100% - 71px);
+  background-color: #0a192f;
+  color: white;
+  z-index: 1000;
+  transition: left 0.3s cubic-bezier(0.62, 0.02, 0.37, 0.98);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #64ffda;
+}
+
+/* ==========================
+   Waffle Menu Bars
+   ========================== */
+.waffle-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  top: 2px;
+}
+
+.waffle-bar {
+  display: block;
+  width: 26px;
+  height: 4px;
+  margin: 3px 0;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  transform-origin: center;
+  z-index: 2001;
+}
+
+.waffle-menu.open .waffle-bar:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+.waffle-menu.open .waffle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.5);
+}
+.waffle-menu.open .waffle-bar:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}

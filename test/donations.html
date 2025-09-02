@@ -1,0 +1,117 @@
+<!-- Donations Page for Synergy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synergy - Donations</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/synergy-favicon-color.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="js/titleEffects.js"></script>
+  <script src="js/particles.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projectupdates.html">Project Updates</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="donations.html">Donations</a></li>
+    </ul>
+  </div>
+
+  <!-- Top Bar -->
+  <nav class="top-bar">
+    <div class="top-bar-inner">
+      <!-- Left: Waffle Menu -->
+      <div class="top-bar-left">
+        <button id="sidebar-toggle" class="waffle-menu" aria-label="Open Menu">
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+        </button>
+      </div>
+
+      <!-- Center: Logo + Title -->
+      <div class="top-bar-center">
+        <div class="logo-title-group">
+          <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
+          <div class="title-particle-wrapper">
+            <div id="title-particles"></div>
+            <span class="site-title" id="synergy-title">Synergy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Theme Switcher -->
+      <div class="top-bar-right">
+        <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content main-content" style="position: relative; z-index: 2; max-width: 700px; margin: 90px auto 0 auto; background: rgba(255,255,255,0.04); border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 2rem 2rem 2rem;">
+    <h1 style="color:#64ffda; font-size:2.2rem; margin-bottom:0.5em; text-align:center;">Support Synergy</h1>
+    <p style="text-align:center; color:#ccc; font-size:1.15rem; max-width: 500px; margin: 0 auto 2rem auto;">Your donation helps us empower students, fund STEM projects, and build a better future. Thank you for supporting our mission!</p>
+    <div class="features" style="margin-top: 2rem; gap: 1.5rem;">
+      <div class="feature-card" style="align-items:center; text-align:center;">
+        <h3>Buy Me a Coffee</h3>
+        <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">
+          <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me a Coffee">
+        </a>
+      </div>
+      <div class="feature-card" style="align-items:center; text-align:center;">
+        <h3>Venmo</h3>
+        <a href="https://venmo.com/" target="_blank">
+          <img src="https://img.shields.io/badge/Venmo-donate-blue?style=for-the-badge&logo=venmo" alt="Venmo">
+        </a>
+      </div>
+      <div class="feature-card" style="align-items:center; text-align:center;">
+        <h3>CashApp</h3>
+        <a href="https://cash.app/$shmssynergy" target="_blank">
+          <img src="https://img.shields.io/badge/CashApp-donate-green?style=for-the-badge&logo=cashapp" alt="CashApp">
+        </a>
+      </div>
+      <div class="feature-card" style="align-items:center; text-align:center;">
+        <h3>GitHub Sponsors</h3>
+        <a href="https://github.com/synergyclub" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub%20Sponsors-support-blueviolet?style=for-the-badge&logo=github" alt="GitHub Sponsors">
+        </a>
+      </div>
+    </div>
+    <div style="margin-top: 2.5rem; color: #aaa; font-size: 1rem; text-align:center;">
+      <p>All donations go directly to supporting Synergy's student-led projects and outreach.</p>
+    </div>
+  </div>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+    <button id="accept-cookies" class="cookie-button">Accept</button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="projectupdates.html">Project Updates</a>
+        <a href="donations.html">Donations</a>
+        <a href="https://github.com/synergyclub" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2023-2025 Synergy Club. All rights reserved.</p>
+        <p>Built with 💚 by <a href="https://github.com/synergyclub" class="footer-github-link" target="_blank">Synergy Team</a></p>
+        <p><span data-version></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/version.js"></script>
+</body>
+</html>

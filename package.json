@@ -17,8 +17,12 @@
   "license": "ISC",
   "author": "synergyclub",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "node index.js"
+    "test": "cd test && node index.js",
+    "deploy": "gh-pages -d public --repo https://github.com/synergyclub/synergyclub.github.io.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

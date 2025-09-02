@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synergy - Home</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/synergy-favicon-color.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/titleEffects.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projectupdates.html">Project Updates</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="donations.html">Donations</a></li>
+    </ul>
+  </div>
+
+  <!-- Top Bar -->
+  <nav class="top-bar">
+    <div class="top-bar-inner">
+      <!-- Left: Waffle Menu -->
+      <div class="top-bar-left">
+        <button id="sidebar-toggle" class="waffle-menu" aria-label="Open Menu">
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+          <span class="waffle-bar"></span>
+        </button>
+      </div>
+
+      <!-- Center: Logo + Title -->
+      <div class="top-bar-center">
+        <div class="logo-title-group">
+          <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
+          <div class="title-particle-wrapper">
+            <div id="title-particles"></div>
+            <span class="site-title" id="synergy-title">Synergy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Theme Switcher -->
+      <div class="top-bar-right">
+        <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+    <div id="particles-js"></div>
+    <div class="content main-content" style="position: relative; z-index: 2; max-width: 700px; margin: 90px auto 0 auto; background: rgba(255,255,255,0.04); border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 2rem 2rem 2rem;">
+      <h1 style="color:#64ffda; font-size:2.2rem; margin-bottom:0.5em; text-align:center;">Info</h1>
+      <p style="text-align:center; color:#ccc; font-size:1.15rem; max-width: 500px; margin: 0 auto 2rem auto;">General info on Synergy and our projects.</p>
+    </div>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+        <button id="accept-cookies" class="cookie-button">Accept</button>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="https://github.com/synergyclub" target="_blank">GitHub</a>
+          <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">Support Us</a>
+          <a href="mission.html">Our Mission</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2023-2025 Synergy Club. All rights reserved.</p>
+          <p>Built with 💚 by <a href="https://github.com/synergyclub" class="footer-github-link" target="_blank">Synergy Team</a></p>
+          <p><span data-version></span></p>
+        </div>
+      </div>
+    </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/version.js"></script>
+</body>
+</html>
