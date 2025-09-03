@@ -1,64 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Synergy - Home</title>
-  <link rel="icon" type="image/x-icon" href="assets/images/synergy-favicon-color.png" />
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-  <script src="../js/titleEffects.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
+  <div id="head-layout"></div>
 </head>
 <body class="forced-white-links">
-  <div id="particles-js"></div>`
+  <div id="particles-js"></div>
   <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projectupdates.html">Project Updates</a></li>
-      <li><a href="mission.html">Our Mission</a></li>
-      <li><a href="info.html">Info</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="donations.html">Donations</a></li>
-    </ul>
-  </div>
+  <div id="sidebar-layout"></div>
 
   <!-- Top Bar -->
-  <nav class="top-bar">
-    <div class="top-bar-inner">
-      <!-- Left: Waffle Menu -->
-      <div class="top-bar-left">
-        <button id="sidebar-toggle" class="waffle-menu" aria-label="Open Menu">
-          <span class="waffle-bar"></span>
-          <span class="waffle-bar"></span>
-          <span class="waffle-bar"></span>
-        </button>
-      </div>
+  <div id="topbar-layout"></div>
 
-      <!-- Center: Logo + Title -->
-      <div class="top-bar-center">
-        <div class="logo-title-group">
-          <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
-          <div class="title-particle-wrapper">
-            <div id="title-particles"></div>
-            <span class="site-title" id="synergy-title">Synergy</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Theme Switcher -->
-      <div class="top-bar-right">
-        <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
-      </div>
-    </div>
-  </nav>
-
-
-
+  <!-- Main Content -->
   <div class="content main-content" style="position: relative; z-index: 2; max-width: 700px; margin: 90px auto 0 auto; background: rgba(255,255,255,0.04); border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 2rem 2rem 2rem;">
     <h1 class="rainbow-title">Welcome to Synergy</h1>
-    <p style="text-align:center; color:#ccc; font-size:1.15rem; max-width: 500px; margin: 0 auto 2rem auto;">Revolutionizing the way you power your computers</p>
-    <div style="text-align: center; margin-top: 20px;">
+    <p style="text-align:center; color:#ccc; font-size:1.15rem; max-width: 500px; margin: 0 auto 2rem auto; user-select: none;">Revolutionizing the way you power your computers</p>
+    <div style="text-align: center; margin-top: 20px; user-select: none;">
       <!-- Buy me a Coffee -->
       <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">
         <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me a Coffee" />
@@ -169,23 +126,9 @@
   </script>
 
   <!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-links">
-      <a href="https://github.com/synergyclub" target="_blank">GitHub</a>
-      <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">Support Us</a>
-      <a href="mission.html">Our Mission</a>
-      <a href="about.html">About Us</a>
-    </div>
-    <div class="footer-copyright">
-      <p>© 2023-2025 Synergy Club. All rights reserved.</p>
-      <p>Built with 💚 by <a href="https://github.com/synergyclub" class="footer-github-link" target="_blank">Synergy Team</a></p>
-      <p><span data-version></span></p>
-    </div>
-  </div>
-</footer>
+<div id="footer-layout"></div>
   <script src="/js/main.js" defer></script>
   <script src="/js/version.js"></script>
-  <script src="/js/particles.js" defer></script>
+  <script src="js/injectLayouts.js"></script>
 </body>
 </html>

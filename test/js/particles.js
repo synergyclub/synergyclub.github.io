@@ -1,8 +1,9 @@
-window.addEventListener('load', function() {
+// JavaScript
+window.addEventListener('load', function () {
     try {
         tsParticles.load("particles-js", {
             particles: {
-                number: { value: 30, density: { enable: true, value_area: 800 } },
+                number: { value: 40, density: { enable: true, value_area: 800 } },
                 color: { value: "#64ffda" },
                 shape: { type: "circle" },
                 opacity: { value: 0.8 },
@@ -33,6 +34,8 @@ window.addEventListener('load', function() {
             },
             detectRetina: true
         });
+
+        // Limit particle count
         const MAX_PARTICLES = 200;
         setInterval(() => {
             const particlesInstance = tsParticles.domItem(0);
@@ -46,6 +49,18 @@ window.addEventListener('load', function() {
                 }
             }
         }, 1000);
+
+        // Cursor visibility check
+        document.addEventListener('mousemove', (e) => {
+            const topElement = document.elementFromPoint(e.clientX, e.clientY);
+            const canvas = document.querySelector('#particles-js canvas');
+            const particlesInstance = tsParticles.domItem(0);
+
+            if (particlesInstance && canvas) {
+                particlesInstance.interactivity.mouse.inside = (topElement === canvas);
+            }
+        });
+
     } catch (error) {
         console.error('Error during particles initialization:', error);
     }

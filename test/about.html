@@ -1,129 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Synergy - About</title>
-  <link rel="icon" type="image/x-icon" href="assets/images/synergy-favicon-color.png">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-  <script src="js/particles.js"></script>
-  <script src="js/titleEffects.js"></script>
-</head>
-<body>
-  <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projectupdates.html">Project Updates</a></li>
-      <li><a href="mission.html">Our Mission</a></li>
-      <li><a href="info.html">Info</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="donations.html">Donations</a></li>
-    </ul>
-  </div>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/synergy-favicon-color.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/titleEffects.js"></script>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projectupdates.html">Project Updates</a></li>
+        <li><a href="mission.html">Our Mission</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="donations.html">Donations</a></li>
+      </ul>
+    </div>
 
-  <!-- Top Bar -->
-  <nav class="top-bar">
-    <div class="top-bar-inner">
-      <!-- Left: Waffle Menu -->
-      <div class="top-bar-left">
-        <button id="sidebar-toggle" class="waffle-menu" aria-label="Open Menu">
-          <span class="waffle-bar"></span>
-          <span class="waffle-bar"></span>
-          <span class="waffle-bar"></span>
-        </button>
-      </div>
+    <!-- Top Bar -->
+    <nav class="top-bar">
+      <div class="top-bar-inner">
+        <!-- Left: Waffle Menu -->
+        <div class="top-bar-left">
+          <button
+            id="sidebar-toggle"
+            class="waffle-menu"
+            aria-label="Open Menu"
+          >
+            <span class="waffle-bar"></span>
+            <span class="waffle-bar"></span>
+            <span class="waffle-bar"></span>
+          </button>
+        </div>
 
-      <!-- Center: Logo + Title -->
-      <div class="top-bar-center">
-        <div class="logo-title-group">
-          <img src="assets/images/synergy-favicon-color.png" alt="Synergy Logo" class="nav-logo" />
-          <div class="title-particle-wrapper">
-            <div id="title-particles"></div>
-            <span class="site-title" id="synergy-title">Synergy</span>
+        <!-- Center: Logo + Title -->
+        <div class="top-bar-center">
+          <div class="logo-title-group">
+            <img
+              src="assets/images/synergy-favicon-color.png"
+              alt="Synergy Logo"
+              class="nav-logo"
+            />
+            <div class="title-particle-wrapper">
+              <div id="title-particles"></div>
+              <span class="site-title" id="synergy-title">Synergy</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Right: Theme Switcher -->
-      <div class="top-bar-right">
-        <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Dark Mode">🌙</button>
+        <!-- Right: Theme Switcher -->
+        <div class="top-bar-right">
+          <button
+            id="theme-switcher"
+            class="theme-switcher"
+            aria-label="Toggle Dark Mode"
+          >
+            🌙
+          </button>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
     <div id="particles-js"></div>
-    <div class="content main-content" style="position: relative; z-index: 2; max-width: 700px; margin: 90px auto 0 auto; background: rgba(255,255,255,0.04); border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 2.5rem 2rem 2rem 2rem;">
-      <h1 style="color:#64ffda; font-size:2.2rem; margin-bottom:0.5em; text-align:center;">About Us</h1>
-      <p style="text-align:center; color:#ccc; font-size:1.15rem; max-width: 500px; margin: 0 auto 2rem auto;">Learn more about Synergy and our mission to empower students through STEM innovation.</p>
-      <div style="text-align: center; margin-top: 20px;">
-          <!-- Buy me a Coffee -->
-          <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">
-              <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me a Coffee" />
-          </a>
-          <!-- GitHub Badge -->
-          <a href="https://github.com/synergyclub" target="_blank">
-              <img src="https://img.shields.io/badge/GitHub-follow-blue?style=for-the-badge&logo=github" alt="GitHub" />
-          </a>
-          <!-- Venmo Badge -->
-          <a href="https://venmo.com/" target="_blank">
-              <img src="https://img.shields.io/badge/Venmo-donate-blue?style=for-the-badge&logo=venmo" alt="Venmo" />
-          </a>
-          <!-- CashApp Badge -->
-          <a href="https://cash.app/$shmssynergy" target="_blank">
-              <img src="https://img.shields.io/badge/CashApp-donate-green?style=for-the-badge&logo=cashapp" alt="CashApp" />
-          </a>
+    <div
+      class="content main-content"
+      style="
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+        margin: 90px auto 0 auto;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+        padding: 2.5rem 2rem 2rem 2rem;
+      "
+    >
+      <h1
+        style="
+          color: #64ffda;
+          font-size: 2.2rem;
+          margin-bottom: 0.5em;
+          text-align: center;
+        "
+      >
+        About Us
+      </h1>
+      <p
+        style="
+          text-align: center;
+          color: #ccc;
+          font-size: 1.15rem;
+          max-width: 500px;
+          margin: 0 auto 2rem auto;
+        "
+      >
+        Learn more about Synergy and our mission to empower students through
+        STEM innovation.
+      </p>
+      <div style="text-align: center; margin-top: 20px">
+        <!-- Buy me a Coffee -->
+        <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">
+          <img
+            src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow?style=for-the-badge&logo=buy-me-a-coffee"
+            alt="Buy Me a Coffee"
+          />
+        </a>
+        <!-- GitHub Badge -->
+        <a href="https://github.com/synergyclub" target="_blank">
+          <img
+            src="https://img.shields.io/badge/GitHub-follow-blue?style=for-the-badge&logo=github"
+            alt="GitHub"
+          />
+        </a>
+        <!-- Venmo Badge -->
+        <a href="https://venmo.com/" target="_blank">
+          <img
+            src="https://img.shields.io/badge/Venmo-donate-blue?style=for-the-badge&logo=venmo"
+            alt="Venmo"
+          />
+        </a>
+        <!-- CashApp Badge -->
+        <a href="https://cash.app/$shmssynergy" target="_blank">
+          <img
+            src="https://img.shields.io/badge/CashApp-donate-green?style=for-the-badge&logo=cashapp"
+            alt="CashApp"
+          />
+        </a>
       </div>
       <div class="features">
-          <div class="feature-card">
-              <h3>What we are doing currently</h3>
-              <p>Currently we are building a version three of our laptop chargers. We are in the initial designing phase and about to enter the prototyping phase.</p>
-          </div>
-          <div class="feature-card">
-              <h3>What are some of the most common questions you get</h3>
-              <p>Guess what! We don't get any questions!</p>
-          </div>
-          <div class="feature-card">
-              <h3>What is Synergy Project</h3>
-              <p>Synergy Project is a project aiming to combine solar panels and green roof to make a health energy source</p>
-          </div>
+        <div class="feature-card">
+          <h3>What we are doing currently</h3>
+          <p>
+            Currently we are building a version three of our laptop chargers. We
+            are in the initial designing phase and about to enter the
+            prototyping phase.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>What are some of the most common questions you get</h3>
+          <p>Guess what! We don't get any questions!</p>
+        </div>
+        <div class="feature-card">
+          <h3>What is Synergy Project</h3>
+          <p>
+            Synergy Project is a project aiming to combine solar panels and
+            green roof to make a health energy source
+          </p>
+        </div>
       </div>
       <div class="features">
-          <div class="feature-card">
-              <h3>Why did we make this website?</h3>
-              <p>We created this website because we wanted to share the designs with the public. Due to wanting to share these designs we made this website in order to share these designs with the public so they can see them.</p>
-          </div>
-          <div class="feature-card">
-              <h3>What is the difference between Synergy 1 and 2?</h3>
-              <p>What makes Synergy 2 better than Synergy 1 is that Synergy 2 is a smaller and more compact model of Synergy 1. The main goal with using Synergy 2 was to have a smaller, lighter, and more portable computer charging station compared to Synergy 1, allowing it to get to places faster than Synergy 1.</p>
-          </div>
-          <div class="feature-card">
-              <h3>What is the difference between Synergy 2 and 3?</h3>
-              <p>	Synergy 3 will be better than Synergy 2 in many ways. One goal is for Synergy 3 to be mostly capable of being 3d printable, and being even more light, compact, and portable than Synergy 2 by using only the components of a car battery instead of the full thing. Another goal is for it to have more outlets so it can charge even more things.</p>
-          </div>
+        <div class="feature-card">
+          <h3>Why did we make this website?</h3>
+          <p>
+            We created this website because we wanted to share the designs with
+            the public. Due to wanting to share these designs we made this
+            website in order to share these designs with the public so they can
+            see them.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>What is the difference between Synergy 1 and 2?</h3>
+          <p>
+            What makes Synergy 2 better than Synergy 1 is that Synergy 2 is a
+            smaller and more compact model of Synergy 1. The main goal with
+            using Synergy 2 was to have a smaller, lighter, and more portable
+            computer charging station compared to Synergy 1, allowing it to get
+            to places faster than Synergy 1.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>What is the difference between Synergy 2 and 3?</h3>
+          <p>
+            Synergy 3 will be better than Synergy 2 in many ways. One goal is
+            for Synergy 3 to be mostly capable of being 3d printable, and being
+            even more light, compact, and portable than Synergy 2 by using only
+            the components of a car battery instead of the full thing. Another
+            goal is for it to have more outlets so it can charge even more
+            things.
+          </p>
+        </div>
       </div>
     </div>
     <div id="cookie-banner" class="cookie-banner">
-        <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
-        <button id="accept-cookies" class="cookie-button">Accept</button>
+      <p>
+        We use cookies to enhance your experience. By continuing to visit this
+        site, you agree to our use of cookies.
+      </p>
+      <button id="accept-cookies" class="cookie-button">Accept</button>
     </div>
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-links">
           <a href="https://github.com/synergyclub" target="_blank">GitHub</a>
-          <a href="https://buymeacoffee.com/shhssynerg9" target="_blank">Support Us</a>
+          <a href="https://buymeacoffee.com/shhssynerg9" target="_blank"
+            >Support Us</a
+          >
           <a href="mission.html">Our Mission</a>
           <a href="about.html">About Us</a>
         </div>
         <div class="footer-copyright">
           <p>© 2023-2025 Synergy Club. All rights reserved.</p>
-          <p>Built with 💚 by <a href="https://github.com/synergyclub" class="footer-github-link" target="_blank">Synergy Team</a></p>
+          <p>
+            Built with 💚 by
+            <a
+              href="https://github.com/synergyclub"
+              class="footer-github-link"
+              target="_blank"
+              >Synergy Team</a
+            >
+          </p>
           <p><span data-version></span></p>
         </div>
       </div>
     </footer>
-  <script src="js/main.js" defer></script>
-  <script src="js/version.js"></script>
-</body>
+    <script src="js/main.js" defer></script>
+    <script src="js/version.js"></script>
+  </body>
 </html>
